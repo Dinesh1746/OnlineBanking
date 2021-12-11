@@ -1,29 +1,26 @@
-
-
-    <h2 id="home">Home</h2>
-
-  <nav>
-  
-    <table border="1" id="t" >
-        <tr>
-          <th>
-            Login Internet Banking
-          </th>
-        </tr>
-        <tr>
-          <td><a routerLink="/login" >Login</a></td>
-        
-        </tr>
-        <tr>
-          <td><a routerLink="/register" routerLinkActive="active" >Register</a></td>
-        </tr>
-        <tr>
-          <td><a routerLink="/open-account" target="_blank">Apply Online for Account</a></td>
-        </tr>
-    </table>
-
-  </nav>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnlineBanking</title>
+</head>
+<body>
+  <div >
+    <div class="header">
+      <h1>Welcome To Online Banking</h1>    
+    </div>
+   
+    <div class="topnav">
+      <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/login" >User Login</a></li>
+      <li><a routerLink="/admin" >Admin Login</a></li>
+      <li><a routerLink="/register">Register</a></li>
+      <li><a routerLink="/open-account">Apply Online for Account</a></li>
+    </ul>
+      </div>
+    </div>           
+</body>
+</html>
 
   <router-outlet></router-outlet>
 

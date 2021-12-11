@@ -1,4 +1,4 @@
-#home
+/* #home
 {
     text-align: center;
 }
@@ -7,4 +7,41 @@
     margin-left: auto;
     margin-right: auto;
 
+} */
+
+body{
+    background-color:darkgrey ;
+    padding: 0%;
+    background-image: url('bank.jpg');
+}
+.header{
+    text-align: center;
+    background-color: white;
+    padding: 0.6%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.topnav{
+    background-color:cyan;
+    padding:0.1px;
+    height: 1%;
+    }
+
+ li{
+    list-style: none;
+    border: none;
+    font-weight: bold;
+   display: inline-block;
+   padding: 0px;
+    
+}
+ li a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: large;
+    font-style: normal;
+    margin: 20px;
+    color: white;
+    box-sizing: border-box;
+    
 }

@@ -14,6 +14,9 @@ import { AddPayeeComponent } from './add-payee/add-payee.component';
 import { ImpsComponent } from './imps/imps.component';
 import { NeftComponent } from './neft/neft.component';
 import { RtgsComponent } from './rtgs/rtgs.component';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -30,6 +33,8 @@ const routes: Routes = [
 {path:'imps',component:ImpsComponent},
 {path:'neft',component:NeftComponent},
 {path:'rtgs',component:RtgsComponent},
+{path:'home',component:HomeComponent},
+{path:'admin',component:AdminComponent}
 
 ];
 
