@@ -11,7 +11,6 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { SetPasswordComponent } from './set-password/set-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
-import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { ChangeUIDComponent } from './change-uid/change-uid.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AddPayeeComponent } from './add-payee/add-payee.component';
@@ -30,7 +29,6 @@ import { RtgsComponent } from './rtgs/rtgs.component';
     SetPasswordComponent,
     DashboardComponent,
     AccountStatementComponent,
-    FundTransferComponent,
     ChangeUIDComponent,
     ChangePasswordComponent,
     AddPayeeComponent,
