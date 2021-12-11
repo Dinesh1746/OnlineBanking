@@ -20,6 +20,8 @@ import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
     HomeComponent,
     AdminComponent,
     FundtransferComponent,
+    UserprofileComponent,
+    AccountDetailsComponent,
   
   ],
   imports: [

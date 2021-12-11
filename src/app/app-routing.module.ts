@@ -17,6 +17,7 @@ import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 const routes: Routes = [
@@ -36,7 +37,8 @@ const routes: Routes = [
 {path:'rtgs',component:RtgsComponent},
 {path:'home',component:HomeComponent},
 {path:'admin',component:AdminComponent},
-{path:'fundtransfer',component:FundtransferComponent}
+{path:'fundtransfer',component:FundtransferComponent},
+{path:'userprofile',component:UserprofileComponent}
 
 ];
 
