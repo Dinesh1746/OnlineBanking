@@ -19,6 +19,7 @@ import { NeftComponent } from './neft/neft.component';
 import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { AdminComponent } from './admin/admin.component';
     RtgsComponent,
     HomeComponent,
     AdminComponent,
+    FundtransferComponent,
   
   ],
   imports: [

@@ -16,6 +16,7 @@ import { NeftComponent } from './neft/neft.component';
 import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
 {path:'neft',component:NeftComponent},
 {path:'rtgs',component:RtgsComponent},
 {path:'home',component:HomeComponent},
-{path:'admin',component:AdminComponent}
+{path:'admin',component:AdminComponent},
+{path:'fundtransfer',component:FundtransferComponent}
 
 ];
 
