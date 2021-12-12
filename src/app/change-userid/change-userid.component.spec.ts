@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FundtransferComponent } from './fundtransfer.component';
+import { ChangeUseridComponent } from './change-userid.component';
 
-describe('FundtransferComponent', () => {
-  let component: FundtransferComponent;
-  let fixture: ComponentFixture<FundtransferComponent>;
+describe('ChangeUseridComponent', () => {
+  let component: ChangeUseridComponent;
+  let fixture: ComponentFixture<ChangeUseridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FundtransferComponent ]
+      declarations: [ ChangeUseridComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FundtransferComponent);
+    fixture = TestBed.createComponent(ChangeUseridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

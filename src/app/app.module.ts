@@ -11,7 +11,6 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { SetPasswordComponent } from './set-password/set-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
-import { ChangeUIDComponent } from './change-uid/change-uid.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { AddPayeeComponent } from './add-payee/add-payee.component';
 import { ImpsComponent } from './imps/imps.component';
@@ -19,9 +18,10 @@ import { NeftComponent } from './neft/neft.component';
 import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
-import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { ChangeUseridComponent } from './change-userid/change-userid.component';
+import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     SetPasswordComponent,
     DashboardComponent,
     AccountStatementComponent,
-    ChangeUIDComponent,
+  
     ChangePasswordComponent,
     AddPayeeComponent,
     ImpsComponent,
@@ -43,9 +43,11 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     RtgsComponent,
     HomeComponent,
     AdminComponent,
-    FundtransferComponent,
+  
     UserprofileComponent,
     AccountDetailsComponent,
+    ChangeUseridComponent,
+    FundTransferComponent,
   
   ],
   imports: [

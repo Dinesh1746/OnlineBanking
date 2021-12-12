@@ -1,14 +1,23 @@
-<p><a routerLink="/dashboard">Back</a></p>
-<div>
-    <h1>Forgot/Change UserID</h1>
+
+
+    <h2>Forgot/Change UserID</h2>
     <h3>Enter Details</h3>
-</div>
-<div>
-    <label for="accountno"><b>Account Number</b></label>
-    <input type="number" placeholder="Enter AccountNumber" name="accountno">
-    <label for="otp"><b>Enter OTP</b></label>
-    <input type="number" placeholder="Enter OTP" name="otp">
-    <br>
-    <button type="submit">Proceed</button>
-    <button type="reset">Back</button>
-</div>
+
+    <table  class=t5>
+        <tr>
+            <td>Accont Number</td>
+            <td>  -  </td>
+            <td><input type="number" placeholder="Enter AccountNumber" name="accountno"></td>
+        </tr>
+        <tr>
+            <td>Enter OTP</td>
+            <td>  -  </td>
+            <td><input type="number" placeholder="Enter OTP" name="otp"></td>
+        </tr><br>
+        <tr>
+            <td><button type="submit"><a routerLink="/change-userid" >Proceed</a></button></td>
+            <td><button type="reset"><a routerLink="/login">Back</a></button></td>
+            <td></td>
+        </tr>
+    </table>
+

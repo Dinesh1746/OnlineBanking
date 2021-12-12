@@ -1,12 +1,12 @@
 
-    <h2>
+    <h2 id="q">
         Open A Savings Account
-    </h2>
+    </h2 >
 
 
-    <h3>Personal Details</h3>
+    <h3 id="p">Personal Details</h3>
 
-<table>
+<table class="t3">
     <tr>
         <td>Title</td>
         <td>-</td>
@@ -60,12 +60,12 @@
         <td>Date of Birth</td>
         <td>-</td>
         <td><input type="date" placeholder="Enter DOB" name="dob"></td>
-    </tr>
+    </tr><br>
     <tr>
-        <td>Residential Address</td>
+        <th>Residential Address</th>
         <td></td>
         <td></td>
-    </tr>
+    </tr><br>
     <tr>
         <td>a)Address Line1</td>
         <td>-</td>
@@ -95,66 +95,104 @@
         <td>f)PinCode</td>
         <td>-</td>
         <td><input type="number" placeholder="Enter PinCode" name="pin"></td>
+    </tr><br>
+    <tr>
+        <th>Permanent Address</th>
+        <td></td>
+        <td></td>
+    </tr><br>
+    <tr>
+        <td><input type="checkbox"> Permanent Address Same as Residential Address</td>
+        <td></td>
+        <td></td>
+    </tr><br>
+    <tr>
+        <td>a)Address Line1</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter Address" name="address1"></td>
     </tr>
     <tr>
-        <td>Permanent Address</td>
+        <td>b)Address Line2</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter Address" name="address2"></td>
+    </tr>
+    <tr>
+        <td>c)LandMark</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter LandMark" name="land"></td>
+    </tr>
+    <tr>
+        <td>d)State</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter State" name="state"></td>
+    </tr>
+    <tr>
+        <td>e)City</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter city" name="city"></td>
+    </tr>
+    <tr>
+        <td>f)PinCode</td>
+        <td>-</td>
+        <td><input type="number" placeholder="Enter PinCode" name="pin"></td>
+    </tr><br>
+    <tr>
+        <th>Occupation Detail</th>
+        <td></td>
+        <td></td>
+    </tr><br>
+    <tr>
+        <td>Occupation Type</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter OccupationType" name="occupationtype"></td>
+    </tr>
+    <tr>
+        <td>Source Of Income</td>
+        <td>-</td>
+        <td><input type="text" placeholder="Enter source of Income" name="sourceincome"></td>
+    </tr>
+    <tr>
+        <td>Gross Annual Income</td>
+        <td>-</td>
+        <td><select name="annualincome">
+            <option value="None">Select</option>
+            <option value="Below 3Lakhs ">Below 3Lakhs</option>
+            <option value="3 Lakhs to 5 Lakhs">3 Lakhs to 5 Lakhs</option>
+            <option value="5 Lakhs to 7 Lakhs">5 Lakhs to 7 Lakhs</option>
+            <option value="7 Lakhs to 10 Lakhs">7 Lakh to 10 Lakhs</option>
+            <option value="Above 10 Lakhs">Above 10 Lakhs</option>
+        </select></td>
+    </tr><br>
+    <tr>
+        <th>Debit/AtM Card</th>
         <td></td>
         <td></td>
     </tr>
+    <tr>
+        <td>Do you want a Debit Card?</td>
+        <td>-</td>
+        <td><select name="debitcard">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select></td>
+    </tr> 
+    <tr>
+        <td><input type="checkbox"> Opt for Net Banking</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"> I agree...</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit" routerLink="/home">Submit</button></td>
+        <td></td>
+    </tr> 
 </table>
 
 
-<div>
-    <h3>Permanent Address</h3>
-    <input type="checkbox"> Permanent Address Same as Residential Address
-   
-</div>
-<br>
-<div>
-    <label for="address1"><b>Address Line1</b></label>
-    <input type="text" placeholder="Enter Address" name="address1">
-    <label for="address2"><b>Address Line2</b></label>
-    <input type="text" placeholder="Enter Address" name="address2">
-    <label for="land"><b>LandMark</b></label>
-    <input type="text" placeholder="Enter LandMark" name="land">
-    <label for="state"><b>State</b></label>
-    <input type="text" placeholder="Enter State" name="state">
-    <label for="city"><b>City</b></label>
-    <input type="text" placeholder="Enter city" name="city">
-    <label for="pin"><b>PinCode</b></label>
-    <input type="number" placeholder="Enter PinCode" name="pin">
-</div>
-<div>
-    <h3>Occupation Details</h3>
-</div>
-<div>
-    <label for="occupationtype"><b>Occupation Type</b></label>
-    <input type="text" placeholder="Enter OccupationType" name="occupationtype">
-    <label for="sourceincome"><b>Source Of Income</b></label>
-    <input type="text" placeholder="Enter source of Income" name="sourceincome">
-    <label for="annualincome">Gross Annual Income</label>
-       <select name="annualincome">
-        <option value="None">Select</option>
-        <option value="Below 3Lakhs ">Below 3Lakhs</option>
-        <option value="3 Lakhs to 5 Lakhs">3 Lakhs to 5 Lakhs</option>
-        <option value="5 Lakhs to 7 Lakhs">5 Lakhs to 7 Lakhs</option>
-        <option value="7 Lakhs to 10 Lakhs">7 Lakh to 10 Lakhs</option>
-        <option value="Above 10 Lakhs">Above 10 Lakhs</option>
-    </select>
-</div>
-<div>
-    <h3>Debit/AtM Card</h3>
-</div>
-<div>
-    Do you want a Debit Card? <select name="debitcard">
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-    </select>
-    <br>
-    <input type="checkbox"> Opt for Net Banking<br>
-    <input type="checkbox"> I agree...
-</div>
-<div>
-    <button type="submit">Submit</button>
-</div>
+
 

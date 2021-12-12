@@ -1,22 +1,30 @@
 <html>
-    <head>
-        <title>DashBoard</title>
-    </head>
     <body>
-        <div class="side">
-            <div class="brand">
-                <h1>DashBoard</h1>
+        <div class="wrap">
+            <div class="sidebar"> 
+                <h1>Dashboard </h1>
+                <ul>
+                    <li><a routerLink="">Account Details</a></li><br>
+                    <li><a routerLink="">Account Summary</a></li><br>
+                    <li><a routerLink="/fund-transfer">Fund Transfer</a></li><br>
+                    <li><a routerLink="/account-statement">Account Statement</a></li>
+                </ul>
             </div>
-            
-            <ul>
-                <li><a >Account Details</a></li>
-                <li><a routerLink="/fundtransfer">Fund Transfer</a></li>
-                <li><a routerLink="/account-statement">Account Statement</a></li>
-                <li><a routerLink="/userprofile" >User Profile</a></li>
-                <li><a routerLink="/forgot-user-id">Change UserId</a></li>
-                <li><a routerLink="/forgot-password">Change Password</a></li>
-            </ul>
+
+            <section class="main"> 
+                <table border="1" class="t8">
+                    <tr>
+                        
+                        <th>      User Profile </th>
+                        <th>    <a routerLink="/change-userid">Change UserID</a></th>
+                        <th>    <a routerLink="/change-password">Change Password</a></th>
+
+                  </tr>
+        
+                </table>
+            </section>
         </div>
-       
-    </body>
+
+</body>
+
 </html>

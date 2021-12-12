@@ -1,31 +1,42 @@
-<p><a routerLink="/dashboard">Back</a></p>
-<div>
-    <h2> Account Statement</h2>
-    <label for="from"><b>Statement From</b></label>
-     <input type="date" name="from" >  to <input type="date" name="from"> 
-</div>
-<br>
-<div>
-<table border="1" >
-    <tr>
-   <th> Select </th>
-   <th> Account Number </th>
-   <th> Name </th>
-   <th> Account Type </th>
-   <th> Balance </th>
-   </tr>
-    <tr>
-      <td> <input type="radio"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-     </tr> 
-</table> 
-</div>
-        
+<html>
+    <body>
+        <div class="wrap">
+            <div class="sidebar"> 
+                <ul>
+                    <li><a routerLink="">Account Details</a></li><br>
+                    <li><a routerLink="">Account Summary</a></li><br>
+                    <li><a routerLink="">Fund Transfer</a></li><br>
+                    <li><a routerLink="/account-statement">Account Statement</a></li>
+                </ul>
+            </div>
+        </div>
 
-<br>
-<div>
-        <button type="submit">Submit</button>
- </div>
+            <section class="main"> 
+                <h2> Account Statement</h2><br><br><br><br><br><br>
+                <label for="from" id="abc"><b>Statement From</b></label>&nbsp;
+
+                 <input type="date" name="from" >  to <input type="date" name="from"> <br><br><br><br><br>
+            
+                <table border="1" class="t7">
+                    <tr>
+                        <th>Select</th>
+                        <th> Account Number </th>
+                        <th> Name </th>
+                        <th> Account Type </th>
+                        <th> Balance </th>
+                  </tr>
+                    <tr>
+                          <td> <input type="radio"></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                    </tr>
+                    
+                </table> 
+            
+              </section>
+
+</body>
+
+</html>
