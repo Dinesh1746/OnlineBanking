@@ -10,41 +10,22 @@ body
 
 .wrap {
 width: 100%;
-
+position: fixed;
 float: left;
-}
-.main
-{
-width: 100%;
-
-height: 100vh;
-position: relative;
-
-}
-.main h1{
-    position: absolute; 
-    top: 50%; 
-    left:50%;
-    transform: translate(0%,0%);
-    font-size: 40px;
-
 }
 
 
 .sidebar{
     height:100vh;
-    width: 360px;
+    width: 320px;
     background-color: black;
     position: fixed;
     z-index: 999;
 }
-
-
 .sidebar h1{
    color: white;
    font-size: 40px;
 }
-
 .sidebar ul{
     display: block;
     margin-top: 50px;
@@ -57,8 +38,21 @@ position: relative;
 .sidebar ul li a{
     color: white;
     text-decoration: none;
-
 } 
+.main
+{
+width: 100%;
+height: 100vh;
+position: relative;
+
+}
+.main h1{
+    position: absolute; 
+    top: 50%; 
+    left:50%;
+    transform: translate(0%,0%);
+    font-size: 40px;
+}
 .t8
 {
     margin-left: auto;

@@ -1,0 +1,53 @@
+*{
+    margin: 0; padding: 0;
+}
+body 
+{ 
+    font-size: 100%; 
+    font-family: sans-serif;
+
+}
+
+.wrap {
+width: 100%;
+position: fixed;
+float: left;
+}
+
+
+.sidebar{
+    height:100vh;
+    width: 320px;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+}
+.sidebar h1{
+   color: white;
+   font-size: 40px;
+}
+.sidebar ul{
+    display: block;
+    margin-top: 50px;
+}
+.sidebar ul li{
+    padding: 10px 0;
+    list-style: none;
+    font-size: 24px;
+}
+.sidebar ul li a{
+    color: white;
+    text-decoration: none;
+} 
+
+.main
+{
+width: 100%;
+height: 100vh;
+position: fixed;
+
+}
+.main h1{
+    position: fixed;  
+    left:50%;
+}

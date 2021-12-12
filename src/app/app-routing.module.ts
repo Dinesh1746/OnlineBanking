@@ -20,6 +20,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ChangeUseridComponent } from './change-userid/change-userid.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 const routes: Routes = [
@@ -40,8 +41,8 @@ const routes: Routes = [
 {path:'home',component:HomeComponent},
 {path:'admin',component:AdminComponent},
 {path:'fund-transfer',component:FundTransferComponent},
-{path:'userprofile',component:UserprofileComponent}
-
+{path:'userprofile',component:UserprofileComponent},
+{path:'account-details',component:AccountDetailsComponent}
 ];
 
 @NgModule({
