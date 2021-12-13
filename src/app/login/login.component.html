@@ -1,24 +1,31 @@
 
     <h2 class="l">Login to your Account</h2>
-
+<form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)" >
 <table  class=t1>
     <tr>
-        <td>User ID</td>
+        <td><label for="userid">User ID</label></td>
         <td>  -  </td>
-        <td><input type="text" placeholder="Enter User ID" name="uid"></td>
+        <td><input type="text" required minlength="3" ngModel name="userid" placeholder="Enter User ID" #userid="ngModel" class="form-control" id="userid">
+            <div *ngIf="userid.errors && userid.errors['required']">userid is required.</div>
+        </td>
     </tr>
+    <br>
     <tr>
-        <td>Password</td>
+        <td><label for="pass">Password</label></td>
         <td>  -  </td>
-        <td><input type="text" placeholder="Enter Password" name="Pass"></td>
-    </tr><br>
+        <td><input type="text" required minlength="6" ngModel name="pass" placeholder="Enter Password" #pass="ngModel" class="form-control" id="pass">
+            <div *ngIf="pass.errors && pass.errors['required']">password is required.</div>
+        </td>
+    </tr>
+   
+    <br>
     <tr>
         <td></td>
-        <td><button><a routerLink="/dashboard">Login</a></button><br></td>
+        <td><button type="submit" [disabled]="!contactForm.valid">Login</button><br></td>
         <td></td>
     </tr>
 </table>
-
+</form>
 <h4>First Time User?<a routerLink="/register" routerLinkActive="active" >Register</a> </h4>
 <h4><a routerLink="/forgot-user-id" >Forgot User ID?</a></h4>
 <h4><a routerLink="/forgot-password" >Forgot Password?</a></h4>
