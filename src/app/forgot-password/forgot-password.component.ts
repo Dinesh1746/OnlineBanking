@@ -16,8 +16,8 @@ export class ForgotPasswordComponent implements OnInit {
   }
     form=new FormGroup(
       {
-        userid :new FormControl('', [Validators.required, Validators.minLength(3)]),
-        enterotp :new FormControl('',[Validators.required, Validators.minLength(6)]),
+        userid :new FormControl('', [Validators.required, Validators.minLength(6)]),
+        enterotp :new FormControl('',[Validators.required]),
       }
     );
     get f(){

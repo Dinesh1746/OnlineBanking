@@ -23,8 +23,7 @@ import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
-const routes: Routes = [
-  {path:'login',component:LoginComponent},
+const routes: Routes = [ {path:'login',component:LoginComponent},
 {path:'register',component:RegisterComponent},
 {path:'open-account',component:OpenAccountComponent},
 {path:'forgot-user-id',component:ForgotUserIDComponent},
