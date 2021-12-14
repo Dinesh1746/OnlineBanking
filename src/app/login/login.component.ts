@@ -19,13 +19,10 @@ export class LoginComponent implements OnInit {
   
   form=new FormGroup(
     {
-<<<<<<< HEAD
+
       userid:new FormControl('', [Validators.required]),
       password:new FormControl('',[Validators.required]),
-=======
-      userid:new FormControl('', [Validators.required, Validators.minLength(6)]),
-      password:new FormControl('',[Validators.required, Validators.minLength(6)]),
->>>>>>> 5724d222f3a0d20ce84510f81663875c5f5f2350
+
     }
   );
 

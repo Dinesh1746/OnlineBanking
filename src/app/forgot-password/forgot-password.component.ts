@@ -28,7 +28,7 @@ export class ForgotPasswordComponent implements OnInit {
       console.log(this.form.value);
     }
     onSubmit() {​​​​​​​​​  
-      this.router.navigate(['/login'])  
+      this.router.navigate(['/set-password'])  
   }​​​​​​​​​
   }
 
