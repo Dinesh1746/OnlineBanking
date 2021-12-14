@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -9,14 +11,28 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
-  submit(form:any){
-    var login=form.userid;
-    console.log(login);
-    var password=form.pass;
-    console.log(password);
-  }
+  constructor( private router:Router) {
+   }
+
   ngOnInit(): void {
   }
+  
+  form=new FormGroup(
+    {
+      userid:new FormControl('', [Validators.required, Validators.minLength(3)]),
+      password:new FormControl('',[Validators.required, Validators.minLength(6)]),
+    }
+  );
+
+  get f(){
+    return this.form.controls;
+  }
+
+  submit(){
+    console.log(this.form.value);
+  }
+  onSubmit() {​​​​​​​​​  
+    this.router.navigate(['/dashboard'])  
+}​​​​​​​​​
 
 }
