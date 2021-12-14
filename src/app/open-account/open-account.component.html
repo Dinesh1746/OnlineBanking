@@ -5,193 +5,246 @@
 
 
     <h3 id="p">Personal Details</h3>
+<form [formGroup]="form" (ngSubmit)="submit()">
 
-<table class="t3">
-    <tr>
-        <td>Title</td>
-        <td>-</td>
-        <td><select name="title">
-            <option value="Mr">Mr</option>
-            <option value="Ms">Ms</option>
-            <option value="Mrs">Mrs</option>
-        </select></td>
-    </tr>
-    <tr>
-        <td>FirstName</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter FirstName" name="fname"></td>
-    </tr>
-    <tr>
-        <td>Middle Name</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter MiddleName" name="mname"></td>
-    </tr>
-    <tr>
-        <td>Last Name</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter LastName" name="lname"></td>
-    </tr>
-    <tr>
-        <td>Father Name</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter FatherName" name="faname"></td>
-    </tr>
-    <tr>
-        <td>Mobile Number</td>
-        <td>-</td>
-        <td><input type="number" placeholder="Enter MobileNumber" name="mobile"></td>
-    </tr>
-    <tr>
-        <td>Email</td>
-        <td>-</td>
-        <td><input type="email" placeholder="Enter Email" name="email"></td>
-    </tr>
-    <tr>
-        <td>Aadhar Number</td>
-        <td>-</td>
-        <td><input type="number" placeholder="Enter AadharNumber" name="aadhar"></td>
-    </tr>
-    <tr>
-        <td>Date of Birth</td>
-        <td>-</td>
-        <td><input type="date" placeholder="Enter DOB" name="dob"></td>
-    </tr>
-    <tr>
-        <td>Date of Birth</td>
-        <td>-</td>
-        <td><input type="date" placeholder="Enter DOB" name="dob"></td>
-    </tr><br>
-    <tr>
-        <th>Residential Address</th>
-        <td></td>
-        <td></td>
-    </tr><br>
-    <tr>
-        <td>a)Address Line1</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter Address" name="address1"></td>
-    </tr>
-    <tr>
-        <td>b)Address Line2</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter Address" name="address2"></td>
-    </tr>
-    <tr>
-        <td>c)LandMark</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter LandMark" name="land"></td>
-    </tr>
-    <tr>
-        <td>d)State</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter State" name="state"></td>
-    </tr>
-    <tr>
-        <td>e)City</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter city" name="city"></td>
-    </tr>
-    <tr>
-        <td>f)PinCode</td>
-        <td>-</td>
-        <td><input type="number" placeholder="Enter PinCode" name="pin"></td>
-    </tr><br>
-    <tr>
-        <th>Permanent Address</th>
-        <td></td>
-        <td></td>
-    </tr><br>
-    <tr>
-        <td><input type="checkbox"> Permanent Address Same as Residential Address</td>
-        <td></td>
-        <td></td>
-    </tr><br>
-    <tr>
-        <td>a)Address Line1</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter Address" name="address1"></td>
-    </tr>
-    <tr>
-        <td>b)Address Line2</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter Address" name="address2"></td>
-    </tr>
-    <tr>
-        <td>c)LandMark</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter LandMark" name="land"></td>
-    </tr>
-    <tr>
-        <td>d)State</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter State" name="state"></td>
-    </tr>
-    <tr>
-        <td>e)City</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter city" name="city"></td>
-    </tr>
-    <tr>
-        <td>f)PinCode</td>
-        <td>-</td>
-        <td><input type="number" placeholder="Enter PinCode" name="pin"></td>
-    </tr><br>
-    <tr>
-        <th>Occupation Detail</th>
-        <td></td>
-        <td></td>
-    </tr><br>
-    <tr>
-        <td>Occupation Type</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter OccupationType" name="occupationtype"></td>
-    </tr>
-    <tr>
-        <td>Source Of Income</td>
-        <td>-</td>
-        <td><input type="text" placeholder="Enter source of Income" name="sourceincome"></td>
-    </tr>
-    <tr>
-        <td>Gross Annual Income</td>
-        <td>-</td>
-        <td><select name="annualincome">
-            <option value="None">Select</option>
-            <option value="Below 3Lakhs ">Below 3Lakhs</option>
-            <option value="3 Lakhs to 5 Lakhs">3 Lakhs to 5 Lakhs</option>
-            <option value="5 Lakhs to 7 Lakhs">5 Lakhs to 7 Lakhs</option>
-            <option value="7 Lakhs to 10 Lakhs">7 Lakh to 10 Lakhs</option>
-            <option value="Above 10 Lakhs">Above 10 Lakhs</option>
-        </select></td>
-    </tr><br>
-    <tr>
-        <th>Debit/AtM Card</th>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Do you want a Debit Card?</td>
-        <td>-</td>
-        <td><select name="debitcard">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select></td>
-    </tr> 
-    <tr>
-        <td><input type="checkbox"> Opt for Net Banking</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><input type="checkbox"> I agree...</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><button type="submit" routerLink="/home">Submit</button></td>
-        <td></td>
-    </tr> 
-</table>
+    <table id="t3" class="form-group">
+        <tr>
+            <td for="title">Title</td>
+            <td>-</td>
+            <td><select name="title" formControlName="title" class="form-control">
+                <option value="Mr">Mr</option>
+                <option value="Ms">Ms</option>
+                <option value="Mrs">Mrs</option>
+            </select>
+            <div *ngIf="f['title'].touched && f['title'].invalid" class="alert alert-danger">
+                <div *ngIf="f['title'].errors && f['title'].errors['required']">Title is required</div>
+            </div></td><br>
+        </tr>
+        <tr>
+            <td for="first">FirstName</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter FirstName" formControlName="first">
+                <div *ngIf="f['first'].touched && f['first'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['first'].errors && f['first'].errors['required']">first name is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td>Middle Name</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter MiddleName" name="mname"></td>
+        </tr>
+        <tr>
+            <td for="last">Last Name</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter LastName" formControlName="last">
+                <div *ngIf="f['last'].touched && f['last'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['last'].errors && f['last'].errors['required']">last name is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="father">Father Name</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter FatherName" formControlName="father">
+                <div *ngIf="f['father'].touched && f['father'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['father'].errors && f['father'].errors['required']">father name is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="moblie">Mobile Number</td>
+            <td>-</td>
+            <td><input type="number" placeholder="Enter MobileNumber" formControlName="mobile">
+            <div *ngIf="f['moblie'].touched && f['moblie'].invalid" class="alert alert-danger">
+                <div *ngIf="f['moblie'].errors && f['moblie'].errors['required']">Mobile number is required</div>
+            </div></td><br>
+        </tr>
+        <tr>
+            <td for="email">Email</td>
+            <td>-</td>
+            <td><input type="email" placeholder="Enter Email" formControlName="email">
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors && f['email'].errors['email']">Enter correct email address</div>
+            </div></td><br>
+        </tr>
+        <tr>
+            <td for="aadhar">Aadhar Number</td>
+            <td>-</td>
+            <td><input type="number" placeholder="Enter AadharNumber" formControlName="aadhar">
+                <div *ngIf="f['aadhar'].touched && f['aadhar'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['aadhar'].errors && f['aadhar'].errors['required']">Aadhar is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="dob">Date of Birth</td>
+            <td>-</td>
+            <td><input type="date" placeholder="Enter DOB" formControlName="dob">
+                <div *ngIf="f['dob'].touched && f['dob'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['dob'].errors && f['dob'].errors['required']">Date of Birth is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <th>Residential Address</th>
+            <td></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td for="add">a)Address Line1</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter Address" formControlName="add">
+                <div *ngIf="f['add'].touched && f['add'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['add'].errors && f['add'].errors['required']">Address is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td>b)Address Line2</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter Address" name="address2"></td>
+        </tr>
+        <tr>
+            <td for="land">c)LandMark</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter LandMark" formControlName="land">
+                <div *ngIf="f['land'].touched && f['land'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['land'].errors && f['land'].errors['required']">Landmark is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="state">d)State</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter State" formControlName="state">
+                <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['state'].errors && f['state'].errors['required']">State is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="city">e)City</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter city" formControlName="city">
+                <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['city'].errors && f['city'].errors['required']">City is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="pin">f)PinCode</td>
+            <td>-</td>
+            <td><input type="number" placeholder="Enter PinCode" formControlName="pin">
+                <div *ngIf="f['pin'].touched && f['pin'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['pin'].errors && f['pin'].errors['required']">Pincode is required</div>
+                </div></td><br>
+        </tr><br>
+        <tr>
+            <th>Permanent Address</th>
+            <td></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><input type="checkbox"> Permanent Address Same as Residential Address</td>
+            <td></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td for="add">a)Address Line1</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter Address" formControlName="add">
+                <div *ngIf="f['add'].touched && f['add'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['add'].errors && f['add'].errors['required']">Address is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td>b)Address Line2</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter Address" name="address2"></td>
+        </tr>
+        <tr>
+            <td for="land">c)LandMark</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter LandMark" formControlName="land">
+                <div *ngIf="f['land'].touched && f['land'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['land'].errors && f['land'].errors['required']">Landmark is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="state">d)State</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter State" formControlName="state">
+                <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['state'].errors && f['state'].errors['required']">State is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="city">e)City</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter city" formControlName="city">
+                <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['city'].errors && f['city'].errors['required']">City is required</div>
+                </div></td><br>
+        </tr>
+        <tr>
+            <td for="pin">f)PinCode</td>
+            <td>-</td>
+            <td><input type="number" placeholder="Enter PinCode" formControlName="pin">
+                <div *ngIf="f['pin'].touched && f['pin'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['pin'].errors && f['pin'].errors['required']">Pincode is required</div>
+                </div></td><br>
+        </tr><br>
+        <tr>
+            <th>Occupation Detail</th>
+            <td></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td>Occupation Type</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter OccupationType" name="occupationtype"></td>
+        </tr>
+        <tr>
+            <td>Source Of Income</td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter source of Income" name="sourceincome"></td>
+        </tr>
+        <tr>
+            <td>Gross Annual Income</td>
+            <td>-</td>
+            <td><select name="annualincome">
+                <option value="None">Select</option>
+                <option value="Below 3Lakhs ">Below 3Lakhs</option>
+                <option value="3 Lakhs to 5 Lakhs">3 Lakhs to 5 Lakhs</option>
+                <option value="5 Lakhs to 7 Lakhs">5 Lakhs to 7 Lakhs</option>
+                <option value="7 Lakhs to 10 Lakhs">7 Lakh to 10 Lakhs</option>
+                <option value="Above 10 Lakhs">Above 10 Lakhs</option>
+            </select></td>
+        </tr><br>
+        <tr>
+            <th>Debit/AtM Card</th>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Do you want a Debit Card?</td>
+            <td>-</td>
+            <td><select name="debitcard">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select></td>
+        </tr> 
+        <tr>
+            <td><input type="checkbox"> Opt for Net Banking</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"> I agree...</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" routerLink="/home">Submit</button></td>
+            <td></td>
+        </tr> 
+    </table>
+
+</form>
 
 
 
