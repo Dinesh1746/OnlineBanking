@@ -45,10 +45,10 @@ export class OpenAccountComponent implements OnInit {
  submit(){
    console.log(this.form.value);
  }
- onSubmit() {​​​​​​​​​  
+ onSubmit() {
 
-   this.router.navigate(['/home']) 
+   this.router.navigate(['/home'])
 
-}​​​​​​​​​
+  }​​​​​
 
 }
