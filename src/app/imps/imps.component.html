@@ -1,21 +1,26 @@
 <p><a routerLink="/fund-transfer">Back</a></p>
 <h2 id="res">Initiate IMPS Payment</h2>
+<form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)" >
 
     <table class="t2" >
         <tr>
             <td> From Account </td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Account Number" name="acno"></td>
+            <td><input type="number" ngModel name="Accountnumber" #Accountnumber="ngModel" class="form-control" id="Accountnumber" placeholder="Enter AccountNumber" name="acno" ></td>
+            <div *ngIf="Accountnumber.errors && Accountnumber.errors['required']">Account Number  is required.</div>
         </tr>
         <tr>
             <td>To Account</td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Account Number" name="acno"></td>
+            <td><input type="number" ngModel name="ToAccountnumber" #ToAccountnumber="ngModel" class="form-control" id="ToAccountnumber"  placeholder="Enter Account Number" name="acno"></td>
+            <div *ngIf="ToAccountnumber.errors && ToAccountnumber.errors['required']">Account Number  is required.</div>
         </tr>
         <tr>
             <td> Amount</td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Amount" name="Amount"></td>
+            <td><input type="number" ngModel name="Amount" #Amount="ngModel" class="form-control" id="Amount" placeholder="Enter Amount" name="Amount"></td>
+            <div *ngIf="Amount.errors && Amount.errors['required']">Please Enter Amount.</div>
+
         </tr>
         <tr>
             <td>Transaction Date</td>
@@ -33,6 +38,7 @@
             <td><input type="submit" value="Continue"></td>
         </tr>
     </table>
+</form>
 
     
 
