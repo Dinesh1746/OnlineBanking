@@ -6,7 +6,7 @@
         <tr>
             <td><label for="userid">User ID</label></td>
             <td>  -  </td>
-            <td><input  placeholder="Enter User ID" formControlName="userid"id="userid" type="text" class="form-control">
+            <td><input  placeholder="Enter User ID" formControlName="userid" id="userid" type="text" class="form-control">
             <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
                 <div *ngIf="f['userid'].errors && f['userid'].errors['required']">Userid is required.</div>
                 <div *ngIf="f['userid'].errors && f['userid'].errors['minlength']">Name should be 3 character.</div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, RequiredValidator } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl,Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-payee',
@@ -11,5 +15,20 @@ export class AddPayeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  form=new FormGroup(
+    {
+      bname:new FormControl('', [Validators.required, Validators.minLength(4)]),
+      acn:new FormControl('', [Validators.required,  Validators.minLength(8)]),
+      nic:new FormControl('', [Validators.required]),
+
+    } 
+  );
+get f(){
+    return this.form.controls;
+  }
+  submit(){
+    console.log(this.form.value);
+  }
+
 
 }

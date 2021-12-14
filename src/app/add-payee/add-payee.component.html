@@ -1,16 +1,29 @@
 <p><a routerLink="/fund-transfer">Back</a></p>
 <h2 id="res">Add New Benficiary</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" >
 
     <table class="t2" >
         <tr>
-            <td>Benficiary Name </td>
+            <td><label for="bname">Benficiary Name</label> </td>
             <td>  -  </td>
-            <td><input type="text" placeholder="Enter Benficiary name" name="bname"></td>
+            <td><input type="text" formControlName="bname" class="form-control" id="bname" placeholder="Enter Benficiary name" >
+                <div *ngIf="f['bname'].touched && f['bname'].invalid" class="alert alert-danger">  
+                    <div *ngIf="f['bname'].errors && f['bname'].errors['required']">Benficiary Name is required.</div>
+                    <div *ngIf="f['bname'].errors && f['bname'].errors['minlength']">Does not satsify required length.</div>
+                </div><br>
+            
+            </td>
         </tr>
         <tr>
-            <td> Benficiary Account Number</td>
+            <td><label for="acn">Benficiary Account Number</label> </td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Account Number" name="Acno"></td>
+            <td><input type="number" formControlName="acn" class="form-control" id="acn" placeholder="Enter Account Number" >
+                <div *ngIf="f['acn'].touched && f['acn'].invalid" class="alert alert-danger">  
+                    <div *ngIf="f['acn'].errors && f['acn'].errors['required']">Benficiary Account number required.</div>
+                    <div *ngIf="f['acn'].errors && f['acn'].errors['minlength']">Does not satsify required length.</div>
+                </div><br>
+            
+            </td>
         </tr>
         <tr>
             <td> Re-Enter Account Number</td>
@@ -18,13 +31,20 @@
             <td><input type="number" placeholder="Re-Enter Account Number" name="RAc"></td>
         </tr>
         <tr>
-            <td>Nick Name</td>
+            <td><label for="nic"> Nick Name </label></td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter Nick Name" name="Nname"></td>
+            <td><input type="text"  formControlName="acn" class="form-control" id="acn" placeholder="Enter Nick Name" >
+                <div *ngIf="f['nic'].touched && f['nic'].invalid" class="alert alert-danger">  
+                    <div *ngIf="f['nic'].errors && f['nic'].errors['required']">Please enter Nick Name.</div>
+                    
+                </div><br>
+            
+            </td>
         </tr><br>
         <tr>
             <td></td>
-            <td><input type="submit" value="Save"></td>
+            <td><input type="submit"  value="Save" > </td>
             <td></td>
         </tr>
     </table>
+</form>
