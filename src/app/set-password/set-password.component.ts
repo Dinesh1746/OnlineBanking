@@ -16,8 +16,8 @@ export class SetPasswordComponent implements OnInit {
   }
   form=new FormGroup(
     {
-      LoginPassword:new FormControl('', [Validators.required, Validators.minLength(3)]),
-      ConfirmLoginpassword :new FormControl('',[Validators.required, Validators.minLength(6)]),
+      userid:new FormControl('', [Validators.required, Validators.minLength(3)]),
+      conpass :new FormControl('',[Validators.required, Validators.minLength(6)]),
     }
   );
   

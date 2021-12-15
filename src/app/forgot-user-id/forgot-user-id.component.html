@@ -18,7 +18,7 @@
             <td>  -  </td>
             <td><input type="number" placeholder="Enter OTP" formControlName="enterotp"></td>
             <div *ngIf="f['enterotp'].touched && f['enterotp'].invalid" class="alert alert-danger">
-                <div *ngIf="f['enterotp'].errors && f['enterotp'].errors['required']">Userid is required.</div>
+                <div *ngIf="f['enterotp'].errors && f['enterotp'].errors['required']">Otp is required.</div>
                 <div *ngIf="f['enterotp'].errors && f['enterotp'].errors['minlength']">Name should be 3 character.</div>
             </div></tr><br>
         <tr>

@@ -30,7 +30,7 @@ export class ChangeUseridComponent implements OnInit {
     console.log(this.form.value);
   }
   onSubmit() {​​​​​​​​​  
-    this.router.navigate(['/dashboard']) 
+    this.router.navigate(['/login']) 
   }
 
 }
