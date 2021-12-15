@@ -1,23 +1,30 @@
 <p><a routerLink="/dashboard">Back</a></p>
 
-    <h2>Forgot/Change UserID</h2>
-    <h3>Enter Details</h3>
+    <h2 class="1">Forgot/Change UserID</h2>
+    <h3 class="2">Enter Details</h3>
+    <form [formGroup]="form" (ngSubmit)="submit()">
 
-    <table  class=t5>
+    <table  id=t5 class="form-group">
         <tr>
-            <td>Account Number</td>
+            <td><label for="AccountNumber">Account Number</label></td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter AccountNumber" name="accountno"></td>
-        </tr>
+            <td><input type="number" placeholder="Enter AccountNumber" formControlName="AccountNumber"></td>
+            <div *ngIf="f['AccountNumber'].touched && f['AccountNumber'].invalid" class="alert alert-danger">
+                <div *ngIf="f['AccountNumber'].errors && f['AccountNumber'].errors['required']">accountnumber is required.</div>
+                <div *ngIf="f['AccountNumber'].errors && f['AccountNumber'].errors['minlength']">Number should be 6 character.</div>
+            </div></tr>
         <tr>
-            <td>Enter OTP</td>
+            <td><label for="enterotp">Enter OTP</label></td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter OTP" name="otp"></td>
-        </tr><br>
+            <td><input type="number" placeholder="Enter OTP" formControlName="enterotp"></td>
+            <div *ngIf="f['enterotp'].touched && f['enterotp'].invalid" class="alert alert-danger">
+                <div *ngIf="f['enterotp'].errors && f['enterotp'].errors['required']">Userid is required.</div>
+                <div *ngIf="f['enterotp'].errors && f['enterotp'].errors['minlength']">Name should be 3 character.</div>
+            </div></tr><br>
         <tr>
-            <td><button type="submit"><a routerLink="/change-userid" >Proceed</a></button></td>
-            <td><button type="reset"><a routerLink="/login">Back</a></button></td>
+            <td><button type="submit" (click)= "onSubmit()" [disabled]="form.invalid">Proceed</button></td>
+            <td><button type="reset">back</button></td>
             <td></td>
         </tr>
     </table>
-
+</form>

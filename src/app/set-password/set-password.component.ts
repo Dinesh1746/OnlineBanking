@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-set-password',
   templateUrl: './set-password.component.html',
@@ -8,7 +10,7 @@ import { FormGroup, FormControl,Validators} from '@angular/forms';
 })
 export class SetPasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +28,9 @@ export class SetPasswordComponent implements OnInit {
   submit(){
     console.log(this.form.value);
   }
+  onSubmit() {​​​​​​​​​  
+    this.router.navigate(['/login']) 
   }
-
+}
   
 
