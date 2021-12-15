@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -19,7 +21,6 @@ import { NeftComponent } from './neft/neft.component';
 import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { ChangeUseridComponent } from './change-userid/change-userid.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
@@ -43,7 +44,6 @@ import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
     RtgsComponent,
     HomeComponent,
     AdminComponent,
-    UserprofileComponent,
     AccountDetailsComponent,
     ChangeUseridComponent,
     FundTransferComponent,

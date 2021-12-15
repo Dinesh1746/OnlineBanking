@@ -16,8 +16,6 @@ import { NeftComponent } from './neft/neft.component';
 import { RtgsComponent } from './rtgs/rtgs.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
-
-import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ChangeUseridComponent } from './change-userid/change-userid.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
@@ -40,7 +38,6 @@ const routes: Routes = [ {path:'login',component:LoginComponent},
 {path:'home',component:HomeComponent},
 {path:'admin',component:AdminComponent},
 {path:'fund-transfer',component:FundTransferComponent},
-{path:'userprofile',component:UserprofileComponent},
 {path:'account-details',component:AccountDetailsComponent}
 ];
 

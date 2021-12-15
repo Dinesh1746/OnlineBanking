@@ -22,7 +22,7 @@ export class OpenAccountComponent implements OnInit {
      first:new FormControl('', [Validators.required]),
      last:new FormControl('', [Validators.required]),
      father:new FormControl('', [Validators.required]),
-     Mobile:new FormControl('', [Validators.required]),
+     mobile:new FormControl('', [Validators.required]),
      email:new FormControl('', [Validators.required,Validators.email]),
      aadhar:new FormControl('', [Validators.required]),
      dob:new FormControl('', [Validators.required]),
@@ -34,7 +34,7 @@ export class OpenAccountComponent implements OnInit {
      otype:new FormControl('',[Validators.required]),
      si:new FormControl('', [Validators.required]),
      gai:new FormControl('', [Validators.required]),
-     iagree:new FormControl('', [Validators.required]),
+    //  iagree:new FormControl('', [Validators.required]),
    }
  );
 

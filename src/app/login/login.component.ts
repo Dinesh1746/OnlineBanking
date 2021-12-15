@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     }
   );
 
-  get f(){
+  get f(){  
     return this.form.controls;
   }
 

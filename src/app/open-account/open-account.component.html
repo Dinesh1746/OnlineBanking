@@ -9,7 +9,7 @@
 
     <table id="t3" class="form-group">
         <tr>
-            <td for="title">Title</td>
+            <td><label for="title">Title</label></td>
             <td>-</td>
             <td><select name="title" formControlName="title" class="form-control">
                 <option value="Mr">Mr</option>
@@ -21,7 +21,7 @@
             </div></td><br>
         </tr>
         <tr>
-            <td for="first">FirstName</td>
+            <td><label for="first">FirstName</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter FirstName" formControlName="first">
                 <div *ngIf="f['first'].touched && f['first'].invalid" class="alert alert-danger">
@@ -29,12 +29,12 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td>Middle Name</td>
+            <td><label>Middle Name</label></td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter MiddleName" name="mname"></td>
+            <td><input type="text" placeholder="Enter MiddleName" ></td>
         </tr>
         <tr>
-            <td for="last">Last Name</td>
+            <td><label for="last">Last Name</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter LastName" formControlName="last">
                 <div *ngIf="f['last'].touched && f['last'].invalid" class="alert alert-danger">
@@ -42,7 +42,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="father">Father Name</td>
+            <td><label for="father">Father Name</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter FatherName" formControlName="father">
                 <div *ngIf="f['father'].touched && f['father'].invalid" class="alert alert-danger">
@@ -50,15 +50,15 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="moblie">Mobile Number</td>
+            <td><label for="mobile">Mobile Number</label></td>
             <td>-</td>
             <td><input type="number" placeholder="Enter MobileNumber" formControlName="mobile">
-            <div *ngIf="f['moblie'].touched && f['moblie'].invalid" class="alert alert-danger">
-                <div *ngIf="f['moblie'].errors && f['moblie'].errors['required']">Mobile number is required</div>
+            <div *ngIf="f['mobile'].touched && f['mobile'].invalid" class="alert alert-danger">
+                <div *ngIf="f['mobile'].errors && f['mobile'].errors['required']">Mobile number is required</div>
             </div></td><br>
         </tr>
         <tr>
-            <td for="email">Email</td>
+            <td><label for="email">Email</label></td>
             <td>-</td>
             <td><input type="email" placeholder="Enter Email" formControlName="email">
             <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
@@ -67,7 +67,7 @@
             </div></td><br>
         </tr>
         <tr>
-            <td for="aadhar">Aadhar Number</td>
+            <td><label for="aadhar">Aadhar Number</label></td>
             <td>-</td>
             <td><input type="number" placeholder="Enter AadharNumber" formControlName="aadhar">
                 <div *ngIf="f['aadhar'].touched && f['aadhar'].invalid" class="alert alert-danger">
@@ -75,7 +75,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="dob">Date of Birth</td>
+            <td><label for="dob">Date of Birth</label></td>
             <td>-</td>
             <td><input type="date" placeholder="Enter DOB" formControlName="dob">
                 <div *ngIf="f['dob'].touched && f['dob'].invalid" class="alert alert-danger">
@@ -88,7 +88,7 @@
             <td></td>
         </tr><br>
         <tr>
-            <td for="add">a)Address Line1</td>
+            <td><label for="add">a)Address Line1</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter Address" formControlName="add">
                 <div *ngIf="f['add'].touched && f['add'].invalid" class="alert alert-danger">
@@ -98,10 +98,10 @@
         <tr>
             <td>b)Address Line2</td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter Address" name="address2"></td>
+            <td><input type="text" placeholder="Enter Address" ></td>
         </tr>
         <tr>
-            <td for="land">c)LandMark</td>
+            <td><label for="land">c)LandMark</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter LandMark" formControlName="land">
                 <div *ngIf="f['land'].touched && f['land'].invalid" class="alert alert-danger">
@@ -109,7 +109,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="state">d)State</td>
+            <td><label for="state">d)State</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter State" formControlName="state">
                 <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">
@@ -117,7 +117,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="city">e)City</td>
+            <td><label for="city">e)City</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter city" formControlName="city">
                 <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
@@ -125,7 +125,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="pin">f)PinCode</td>
+            <td><label for="pin">f)PinCode</label></td>
             <td>-</td>
             <td><input type="number" placeholder="Enter PinCode" formControlName="pin">
                 <div *ngIf="f['pin'].touched && f['pin'].invalid" class="alert alert-danger">
@@ -143,7 +143,7 @@
             <td></td>
         </tr><br>
         <tr>
-            <td for="add">a)Address Line1</td>
+            <td><label for="add">a)Address Line1</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter Address" formControlName="add">
                 <div *ngIf="f['add'].touched && f['add'].invalid" class="alert alert-danger">
@@ -151,12 +151,14 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td>b)Address Line2</td>
+            <td><label>b)Address Line2</label></td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter Address" name="address2"></td>
+            <td><input type="text" placeholder="Enter Address" >
+                
+            </td>
         </tr>
         <tr>
-            <td for="land">c)LandMark</td>
+            <td><label for="land">c)LandMark</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter LandMark" formControlName="land">
                 <div *ngIf="f['land'].touched && f['land'].invalid" class="alert alert-danger">
@@ -164,7 +166,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="state">d)State</td>
+            <td><label for="state">d)State</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter State" formControlName="state">
                 <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">
@@ -172,7 +174,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="city">e)City</td>
+            <td><label for="city">e)City</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter city" formControlName="city">
                 <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
@@ -180,7 +182,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="pin">f)PinCode</td>
+            <td><label for="pin">f)PinCode</label></td>
             <td>-</td>
             <td><input type="number" placeholder="Enter PinCode" formControlName="pin">
                 <div *ngIf="f['pin'].touched && f['pin'].invalid" class="alert alert-danger">
@@ -193,7 +195,7 @@
             <td></td>
         </tr><br>
         <tr>
-            <td for="otype">Occupation Type</td>
+            <td><label for="otype">Occupation Type</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter OccupationType" formControlName="otype">
                 <div *ngIf="f['otype'].touched && f['otype'].invalid" class="alert alert-danger">
@@ -201,7 +203,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="si">Source Of Income</td>
+            <td><label for="si">Source Of Income</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter source of Income" formControlName="si">
                 <div *ngIf="f['otype'].touched && f['otype'].invalid" class="alert alert-danger">
@@ -209,7 +211,7 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td for="gai">Gross Annual Income</td>
+            <td><label for="gai">Gross Annual Income</label></td>
             <td>-</td>
             <td><select name="annualincome" formControlName="gai">
                 <option value="None">Select</option>
@@ -241,13 +243,13 @@
             <td></td>
         </tr>
         <tr>
-            <td for="iagree"><input type="checkbox" formControlName="iagree"> I agree...</td>
+            <td><input type="checkbox" > I agree...</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
-            <td><button type="submit" (click)=" onSubmit()" [disabled]="form.invalid" ></button></td>
+            <td><button type="submit" (click)=" onSubmit()" [disabled]="form.invalid" >Submit</button></td>
             <td></td>
         </tr> 
     </table>
