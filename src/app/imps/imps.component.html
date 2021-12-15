@@ -19,7 +19,7 @@
             <td>  -  </td>
             <td><input type="number" formControlName="tac" class="form-control" id="tac"  placeholder="Enter Account Number" >           
                 <div *ngIf="f['tac'].touched && f['tac'].invalid" class="alert alert-danger">
-                <div *ngIf="f['tac'].errors && f['tac'].errors['required']">TO Account is required.</div>
+                <div *ngIf="f['tac'].errors && f['tac'].errors['required']">To Account is required.</div>
                 <div *ngIf="f['tac'].errors && f['tac'].errors['minlength']">Account Number should be 4 NO.</div>
                 </div><br>
             </td>
@@ -46,7 +46,7 @@
             <td><input type="text"   class="form-control" id="remark" placeholder="Remarks" ></td>
         </tr><br>
         <tr>
-            <td><button type="submit" [disabled]="form.invalid" >Save</button>&nbsp;&nbsp; <input type="reset"></td>
+            <td><button type="submit"  [disabled]="form.invalid" > Save</button> &nbsp;&nbsp; <input type="reset"></td>
             <td>-</td>
             <td><input type="submit" value="Continue"></td>
         </tr>

@@ -1,40 +1,55 @@
 <p><a routerLink="/fund-transfer">Back</a></p>
 <h2 id="res">Initiate NEFT Payment</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" >
 
     <table class="t2" >
         <tr>
-            <td> From Account </td>
+            <td><label for="fac">From Account</label> </td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Account Number" name="acno"></td>
+            <td><input type="number" formControlName="fac" class="form-control" id="fac" placeholder="Enter AccountNumber" >
+                <div *ngIf="f['fac'].touched && f['fac'].invalid" class="alert alert-danger">  
+                <div *ngIf="f['fac'].errors && f['fac'].errors['required']">From Account is required.</div>
+                <div *ngIf="f['fac'].errors && f['fac'].errors['minlength']">Account Number should be 4 NO.</div>
+                </div><br>
+            </td>
+            
         </tr>
         <tr>
-            <td>To Account</td>
+            <td><label for="tac">To Account</label></td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Account Number" name="acno"></td>
+            <td><input type="number" formControlName="tac" class="form-control" id="tac"  placeholder="Enter Account Number" >           
+                <div *ngIf="f['tac'].touched && f['tac'].invalid" class="alert alert-danger">
+                <div *ngIf="f['tac'].errors && f['tac'].errors['required']">TO Account is required.</div>
+                <div *ngIf="f['tac'].errors && f['tac'].errors['minlength']">Account Number should be 4 NO.</div>
+                </div><br>
+            </td>
         </tr>
         <tr>
-            <td> Amount</td>
+            <td><label for="amount">Amount</label></td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Amount" name="Amount"></td>
+            <td><input type="number" formControlName="amount"  class="form-control" id="amount" placeholder="Enter Amount" >
+                <div *ngIf="f['amount'].touched && f['amount'].invalid" class="alert alert-danger">
+                <div *ngIf="f['amount'].errors && f['amount'].errors['required']">Amount is required.</div>
+            </div><br>
+            </td>
+            
+
         </tr>
         <tr>
-            <td>Transaction Date</td>
+            <td><label for="date">Transaction Date</label></td>
             <td>-</td>
-            <td><input type="datetime" placeholder="Enter date and time" name="date"></td>
+            <td><input type="datetime-local" formControlName="date"  class="form-control" id="date" placeholder="Enter date and time" ></td>
         </tr>
         <tr>
-            <td>Remarks</td>
+            <td><label for="remark">Remarks</label></td>
             <td>-</td>
-            <td><input type="text" placeholder="Remarks" name="re"></td>
+            <td><input type="text" formControlName="remark"  class="form-control" id="remark" placeholder="Remarks" ></td>
         </tr><br>
         <tr>
-            <td><input type="submit" value="Save"> &nbsp;&nbsp; <input type="reset"></td>
+            <td><input type="submit" [disabled]="form.invalid" value="Save"> &nbsp;&nbsp; <input type="reset"></td>
             <td>-</td>
             <td><input type="submit" value="Continue"></td>
         </tr>
     </table>
-
-    
-
-
+</form>
 

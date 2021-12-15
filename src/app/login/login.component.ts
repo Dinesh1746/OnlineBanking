@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     {
 
       userid:new FormControl('', [Validators.required]),
-      password:new FormControl('',[Validators.required]),
+      pass:new FormControl('',[Validators.required]),
 
     }
   );
