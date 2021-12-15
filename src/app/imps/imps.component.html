@@ -38,15 +38,15 @@
         <tr>
             <td><label for="date">Transaction Date</label></td>
             <td>-</td>
-            <td><input type="datetime-local" formControlName="date"  class="form-control" id="date" placeholder="Enter date and time" ></td>
+            <td><input type="datetime-local"   class="form-control" id="date" placeholder="Enter date and time" ></td>
         </tr>
         <tr>
             <td><label for="remark">Remarks</label></td>
             <td>-</td>
-            <td><input type="text" formControlName="remark"  class="form-control" id="remark" placeholder="Remarks" ></td>
+            <td><input type="text"   class="form-control" id="remark" placeholder="Remarks" ></td>
         </tr><br>
         <tr>
-            <td><input type="submit" [disabled]="form.invalid" value="Save"> &nbsp;&nbsp; <input type="reset"></td>
+            <td><button type="submit"  [disabled]="form.invalid" > Save</button> &nbsp;&nbsp; <input type="reset"></td>
             <td>-</td>
             <td><input type="submit" value="Continue"></td>
         </tr>

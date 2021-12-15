@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule, RequiredValidator } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-imps',
@@ -10,7 +11,7 @@ import { FormGroup, FormControl,Validators} from '@angular/forms';
 })
 export class ImpsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -28,4 +29,5 @@ get f(){
   submit(){
     console.log(this.form.value);
   }
+ 
 }

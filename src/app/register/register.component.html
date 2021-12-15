@@ -1,47 +1,66 @@
 
     <h2 id="res">Register For Internet Banking</h2>
-
-    <table class="t2" >
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <table id="t2" class="form-group">
         <tr>
-            <td>Account Number</td>
+            <td><label for="Ac">Account Number</label></td>
             <td>  -  </td>
-            <td><input type="text" placeholder="Enter Account Number" name="acno"></td>
+            <td><input type="number" placeholder="Enter Account Number" formControlName="Ac"  class="form-control">
+                <div *ngIf="f['Ac'].touched && f['Ac'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['Ac'].errors && f['Ac'].errors['required']">Account number is required.</div>
+                    <div *ngIf="f['Ac'].errors && f['Ac'].errors['minlength']">Account number should be 12 numbers</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td> Set UserID</td>
+            <td for="uid"> Set UserID</td>
             <td>  -  </td>
-            <td><input type="text" placeholder="Set User ID" name="UseID"></td>
+            <td><input type="text" placeholder="Set User ID" formControlName="uid"  class="form-control">
+                <div *ngIf="f['uid'].touched && f['uid'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['uid'].errors && f['uid'].errors['required']">User Id is required.</div>
+                    <div *ngIf="f['uid'].errors && f['uid'].errors['minlength']">User Id should be 6 characters.</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td> Set Login Password</td>
+            <td for="lp"> Set Login Password</td>
             <td>  -  </td>
-            <td><input type="text" placeholder="Set Login Password" name="loginpass"></td>
+            <td><input type="password" placeholder="Set Login Password" formControlName="lp"  class="form-control">
+                <div *ngIf="f['lp'].touched && f['lp'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['lp'].errors && f['lp'].errors['required']">Password is required.</div>
+                    <div *ngIf="f['uid'].errors && f['uid'].errors['minlength']">Password should be 6 characters.</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td>Confirm Login Password</td>
+            <td for="clp">Confirm Login Password</td>
             <td>-</td>
-            <td><input type="text" placeholder="Confirm Login Password" name="conloginpass"></td>
+            <td><input type="password" placeholder="Confirm Login Password" formControlName="clp"  class="form-control">
+                <div *ngIf="f['clp'].touched && f['clp'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['clp'].errors && f['clp'].errors['required']">Confirm Password is required.</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td>Set Transcation Password</td>
+            <td for="tp">Set Transcation Password</td>
             <td>-</td>
-            <td><input type="text" placeholder="Set Transcation Password" name="transcation"></td>
+            <td><input type="password" placeholder="Set Transcation Password" formControlName="tp"  class="form-control">
+                <div *ngIf="f['tp'].touched && f['tp'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['tp'].errors && f['tp'].errors['required']">Transcation Password is required.</div>
+                    <div *ngIf="f['tp'].errors && f['tp'].errors['minlength']">Transcation Password should be 4 characters.</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td>Confirm Transcation Password</td>
+            <td for="ctp">Confirm Transcation Password</td>
             <td>-</td>
-            <td><input type="text" placeholder="Confirm Transcation Password" name="contranscation"></td>
-        </tr>
-        <tr>
-            <td>Confirm Transcation Password</td>
-            <td>-</td>
-            <td><input type="text" placeholder="Confirm Transcation Password" name="contranscation"></td>
+            <td><input type="password" placeholder="Confirm Transcation Password" formControlName="ctp"  class="form-control">
+                <div *ngIf="f['ctp'].touched && f['ctp'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['ctp'].errors && f['ctp'].errors['required']">Transcation Password is required.</div>
+                </div></td><br>
         </tr><br>
         <tr>
             <td></td>
-            <td><input type="submit" routerLink="/login"></td>
+            <td><input type="submit" (click)=" onSubmit()" [disabled]="form.invalid" ></td>
             <td></td>
         </tr>
     </table>
+
+</form>
    
 
