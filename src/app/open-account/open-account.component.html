@@ -193,26 +193,34 @@
             <td></td>
         </tr><br>
         <tr>
-            <td>Occupation Type</td>
+            <td for="otype">Occupation Type</td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter OccupationType" name="occupationtype"></td>
+            <td><input type="text" placeholder="Enter OccupationType" formControlName="otype">
+                <div *ngIf="f['otype'].touched && f['otype'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['otype'].errors && f['otype'].errors['required']">Occupation is required</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td>Source Of Income</td>
+            <td for="si">Source Of Income</td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter source of Income" name="sourceincome"></td>
+            <td><input type="text" placeholder="Enter source of Income" formControlName="si">
+                <div *ngIf="f['otype'].touched && f['otype'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['otype'].errors && f['otype'].errors['required']">Source is required</div>
+                </div></td><br>
         </tr>
         <tr>
-            <td>Gross Annual Income</td>
+            <td for="gai">Gross Annual Income</td>
             <td>-</td>
-            <td><select name="annualincome">
+            <td><select name="annualincome" formControlName="gai">
                 <option value="None">Select</option>
                 <option value="Below 3Lakhs ">Below 3Lakhs</option>
                 <option value="3 Lakhs to 5 Lakhs">3 Lakhs to 5 Lakhs</option>
                 <option value="5 Lakhs to 7 Lakhs">5 Lakhs to 7 Lakhs</option>
                 <option value="7 Lakhs to 10 Lakhs">7 Lakh to 10 Lakhs</option>
                 <option value="Above 10 Lakhs">Above 10 Lakhs</option>
-            </select></td>
+            </select><div *ngIf="f['gai'].touched && f['gai'].invalid" class="alert alert-danger">
+                <div *ngIf="f['gai'].errors && f['gai'].errors['required']">Annual Income is required</div>
+            </div></td><br>
         </tr><br>
         <tr>
             <th>Debit/AtM Card</th>
@@ -233,13 +241,13 @@
             <td></td>
         </tr>
         <tr>
-            <td><input type="checkbox"> I agree...</td>
+            <td for="iagree"><input type="checkbox" formControlName="iagree"> I agree...</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
-            <td><button type="submit" routerLink="/home">Submit</button></td>
+            <td><button type="submit" (click)=" onSubmit()" [disabled]="form.invalid" ></button></td>
             <td></td>
         </tr> 
     </table>
