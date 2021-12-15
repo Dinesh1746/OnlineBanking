@@ -2,21 +2,29 @@
 
     <h2 class="1">Set New UserID</h2>
     
-    
+<form [formGroup]="form" (ngSubmit)="submit()">
     <table  id=t6>
         <tr>
-            <td>New UserID</td>
+            <td for="new">New UserID</td>
             <td>  -  </td>
-            <td><input type="text" placeholder="Enter UserID" name="loginpass"></td>
+            <td><input type="text" placeholder="Enter UserID" formControlName="new">
+                <div *ngIf="f['new'].touched && f['new'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['new'].errors && f['new'].errors['required']">Userid is required.</div>
+                    <div *ngIf="f['new'].errors && f['new'].errors['minlength']">Userid  should be 3 character.</div>
+                </div></td>
         </tr>
         <tr>
-            <td>Confirm UserId</td>
+            <td for="cnew">Confirm UserId</td>
             <td>  -  </td>
-            <td><input type="text" placeholder=" Confirm UserID" name="conpass"></td>
+            <td><input type="text" placeholder=" Confirm UserID" formControlName="cnew">
+                <div *ngIf="f['cnew'].touched && f['cnew'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['cnew'].errors && f['cnew'].errors['required']">Userid is required.</div>
+                </div></td>
         </tr><br>
         <tr>
             <td></td>
-            <td><button type="submit" routerLink="/login">Submit</button></td>
+            <td><button type="submit" (click)= "onSubmit()" [disabled]="form.invalid">Submit</button></td>
             <td></td>
         </tr>
     </table>
+</form>  
