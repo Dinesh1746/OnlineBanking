@@ -4,7 +4,7 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
     <table id=t1 class="form-group">
         <tr>
-            <td for="userid">User ID</td>
+            <td><label for="userid">User ID</label></td>
             <td>  -  </td>
             <td><input  placeholder="Enter User ID" formControlName="userid" type="text" class="form-control">
             <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
