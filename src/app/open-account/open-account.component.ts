@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { OpenaccService } from '../openacc.service';
 
 @Component({
   selector: 'app-open-account',
@@ -9,11 +10,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./open-account.component.css']
 })
 export class OpenAccountComponent implements OnInit {
-
-  constructor( private router:Router) {
+  public ee:any
+  constructor( private router:Router,private service:OpenaccService) {
   }
 
  ngOnInit(): void {
+   this.getaccdata();
+ }
+ private getaccdata():void{
+   this.service.getAcc().subscribe(result=>
+    {
+      this.ee=result;
+    });
  }
  
  form=new FormGroup(
