@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { RegisService } from '../regis.service';
 
 @Component({
   selector: 'app-register',
@@ -10,11 +11,22 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor( private router:Router) {
+  public abhi:any;
+
+  constructor(private service:RegisService, private router:Router) {
   }
 
  ngOnInit(): void {
+   this.getResisterData();
  }
+
+ private getResisterData():void{
+   this.service.getRegisters().subscribe(result=>
+    {
+      this.abhi=result;
+    });
+ }
+
  
  form=new FormGroup(
    {

@@ -1,4 +1,4 @@
-
+<!-- 
     <h2 id="res">Register For Internet Banking</h2>
 <form [formGroup]="form" (ngSubmit)="submit()">
     <table id="t2" class="form-group">
@@ -63,4 +63,18 @@
 
 </form>
    
+ -->
 
+
+ <table>
+     <tr>
+         <th scope="col">rid</th>
+         <th scope="col">userid</th>
+         <th scope="col">password</th>
+     </tr>
+     <tr *ngFor="let t of abhi">
+         <td scope="row">{{t.rid}}</td>
+         <td>{{t.userid}}</td>
+         <td>{{t.password}}</td>
+     </tr>
+ </table>
