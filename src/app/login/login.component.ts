@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { LoginiService } from '../logini.service';
 
 
 @Component({
@@ -11,10 +11,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor( private router:Router) {
+  public hari:any;
+
+  constructor( private service:LoginiService,private router:Router) {
    }
 
   ngOnInit(): void {
+    this.getLoginData();
+  }
+  private getLoginData():void{
+    this.service.getLogin().subscribe(result=>
+     {
+       this.hari=result;
+     });
   }
   
   form=new FormGroup(
