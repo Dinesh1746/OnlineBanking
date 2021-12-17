@@ -42,10 +42,10 @@ export class RegisterComponent implements OnInit {
 
   // }
 
-  resetForm(form:NgForm){
-    form.form.reset();
-    this.service.formData=new register();
-  }
+  // resetForm(form:NgForm){
+  //   form.form.reset();
+  //   this.service.formData=new register();
+  // }
 
  
  form=new FormGroup(
@@ -66,18 +66,23 @@ export class RegisterComponent implements OnInit {
  submit(){
    console.log(this.form.value);
  }
- onSubmit(form:NgForm) {​​​​​​​​​  
-  this.insertRecord(form);
-   this.router.navigate(['/login'])
-}​​​​​​​​​
-insertRecord(form:NgForm)
+//  onSubmit(form:NgForm) {​​​​​​​​​  
+//   this.insertRecord(form);
+//    this.router.navigate(['/login'])
+// }​​​​​​​​​
+// insertRecord(form:NgForm)
+// {
+//   this.service.addResisterData().subscribe(
+//     res=>{
+//       this.resetForm(form);
+//     },
+//     err=>{console.log(err);}
+//   )
+// }
+
+onSubmit()
 {
-  this.service.addResisterData().subscribe(
-    res=>{
-      this.resetForm(form);
-    },
-    err=>{console.log(err);}
-  )
+  this.router.navigate(['/login'])
 }
 
 

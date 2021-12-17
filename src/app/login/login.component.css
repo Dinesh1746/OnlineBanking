@@ -1,9 +1,11 @@
 .l
 {
     text-align: center;
+    padding-top: 3%;
 }
 #t1
 {
+    padding-top: 5%;
     margin-left: auto;
     margin-right: auto;
 
@@ -11,4 +13,10 @@
 h4
 {
     text-align: center;
+}
+body
+{
+    background-image: url("login.jpg");
+    background-size: cover;
+    height:500px;
 }

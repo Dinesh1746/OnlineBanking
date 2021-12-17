@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdmindashService } from '../admindash.service';
 
 @Component({
   selector: 'app-admin-dash',
@@ -6,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dash.component.css']
 })
 export class AdminDashComponent implements OnInit {
-
   public data1:any;
 
-
-
-  constructor() { }
+  constructor( private service:AdmindashService) { }
 
   ngOnInit(): void {
+    this.getadmindashdetails()
   }
 
+  private getadmindashdetails():void{
+    this.service.getadmindash().subscribe(res=>
+      {
+        this.data1=res;
+      })
+  }
 }
