@@ -27,11 +27,12 @@ export class LoginComponent implements OnInit {
      });
   }
   
+      
   form=new FormGroup(
     {
 
       userid:new FormControl('', [Validators.required]),
-      pass:new FormControl('',[Validators.required]),
+       pass:new FormControl('',[Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
 
     }
   );
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
   get f(){  
     return this.form.controls;
   }
+
 
   submit(){
     console.log(this.form.value);
@@ -53,5 +55,9 @@ export class LoginComponent implements OnInit {
       alert("invalid");
     } 
 }​​​​​​​​​
+onSubmit1()
+{
+  this.router.navigate(['/register']) 
+}
 
 }

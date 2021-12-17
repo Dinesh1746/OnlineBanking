@@ -16,6 +16,7 @@
         <td><input type="password" placeholder="Enter Password" formControlName="pass">
             <div *ngIf="f['pass'].touched && f['pass'].invalid" class="alert alert-danger">
                 <div *ngIf="f['pass'].errors && f['pass'].errors['required']">password is required.</div>
+                <div *ngIf="f['pass'].errors && f['pass'].errors['pattern']">Password length should be atleast 8<br> and contains atleast one uppercase,one lowercase,one numeric value<br>one special character.</div> 
             </div>
         </td><br>
     </tr><br>
