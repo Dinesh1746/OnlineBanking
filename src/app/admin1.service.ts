@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AdminService {
 
-  private basepath="http://localhost:59973/api/Admins";
+  private basepath="http://localhost:60340/api/Admins";
 
   constructor(private http:HttpClient) { }
   

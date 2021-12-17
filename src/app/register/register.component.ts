@@ -15,7 +15,7 @@ import { NgForm } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   public abhi:any;
-  /* Register=new register(); */
+
 
   constructor(public service:RegisService, private router:Router) {
   }
@@ -32,6 +32,7 @@ export class RegisterComponent implements OnInit {
 
  }
  
+<<<<<<< HEAD
   //  addResisterData():void{
 
   //   this.service.addResisterData(this.Register).subscribe(
@@ -47,6 +48,8 @@ export class RegisterComponent implements OnInit {
   //   this.service.formData=new register();
   // }
 
+=======
+>>>>>>> d586c6748496c26fd466890880ad976c8a839565
  
  form=new FormGroup(
    {
@@ -66,6 +69,7 @@ export class RegisterComponent implements OnInit {
  submit(){
    console.log(this.form.value);
  }
+<<<<<<< HEAD
 //  onSubmit(form:NgForm) {​​​​​​​​​  
 //   this.insertRecord(form);
 //    this.router.navigate(['/login'])
@@ -85,5 +89,11 @@ onSubmit()
   this.router.navigate(['/login'])
 }
 
+=======
+ onSubmit() {​​​​​​​​​  
+
+   this.router.navigate(['/login'])
+}​​​​​​​​​
+>>>>>>> d586c6748496c26fd466890880ad976c8a839565
 
 }

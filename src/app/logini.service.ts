@@ -6,7 +6,7 @@ import { Observable, retry } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginiService {
-  private basepath="http://localhost:59973/api/Registers";
+  private basepath="http://localhost:60340/api/Registers";
 
   constructor(private http:HttpClient) { }
   
