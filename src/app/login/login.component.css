@@ -1,9 +1,11 @@
 .l
 {
     text-align: center;
+    padding-top: 3%;
 }
 #t1
 {
+    padding-top: 5%;
     margin-left: auto;
     margin-right: auto;
 
@@ -12,6 +14,15 @@ h4
 {
     text-align: center;
 }
+<<<<<<< HEAD
 h2{
     text-align: center;
 }
+=======
+body
+{
+    background-image: url("login.jpg");
+    background-size: cover;
+    height:500px;
+}
+>>>>>>> 6e291e7a2f7063262df5d18ae907d7bc2f7829d5

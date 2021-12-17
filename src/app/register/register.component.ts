@@ -32,6 +32,24 @@ export class RegisterComponent implements OnInit {
 
  }
  
+<<<<<<< HEAD
+  //  addResisterData():void{
+
+  //   this.service.addResisterData(this.Register).subscribe(
+  //     res=>{
+  //       console.log(res);
+  //     }
+  //   )
+
+  // }
+
+  // resetForm(form:NgForm){
+  //   form.form.reset();
+  //   this.service.formData=new register();
+  // }
+
+=======
+>>>>>>> d586c6748496c26fd466890880ad976c8a839565
  
  form=new FormGroup(
    {
@@ -51,9 +69,31 @@ export class RegisterComponent implements OnInit {
  submit(){
    console.log(this.form.value);
  }
+<<<<<<< HEAD
+//  onSubmit(form:NgForm) {​​​​​​​​​  
+//   this.insertRecord(form);
+//    this.router.navigate(['/login'])
+// }​​​​​​​​​
+// insertRecord(form:NgForm)
+// {
+//   this.service.addResisterData().subscribe(
+//     res=>{
+//       this.resetForm(form);
+//     },
+//     err=>{console.log(err);}
+//   )
+// }
+
+onSubmit()
+{
+  this.router.navigate(['/login'])
+}
+
+=======
  onSubmit() {​​​​​​​​​  
 
    this.router.navigate(['/login'])
 }​​​​​​​​​
+>>>>>>> d586c6748496c26fd466890880ad976c8a839565
 
 }
