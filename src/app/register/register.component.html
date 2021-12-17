@@ -25,13 +25,13 @@
 
 
 
- <!-- <h2 id="res">Register For Internet Banking</h2>
-<form [formGroup]="form" (ngSubmit)="submit()" #form="ngForm">
+ <h2 id="res">Register For Internet Banking</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" >
     <table id="t2" class="form-group">
         <tr>
             <td><label for="Ac">Account Number</label></td>
             <td>  -  </td>
-            <td><input type="number" placeholder="Enter Account Number" formControlName="Ac"  name="ngModel" [(ngModel)]="service.formData.rid">
+            <td><input type="number" placeholder="Enter Account Number" formControlName="Ac"  >
                 <div *ngIf="f['Ac'].touched && f['Ac'].invalid" class="alert alert-danger">
                     <div *ngIf="f['Ac'].errors && f['Ac'].errors['required']">Account number is required.</div>
                     <div *ngIf="f['Ac'].errors && f['Ac'].errors['minlength']">Account number should be 12 numbers</div>
@@ -40,7 +40,7 @@
         <tr>
             <td for="uid"> Set UserID</td>
             <td>  -  </td>
-            <td><input type="text" placeholder="Set User ID" formControlName="uid"  name="ngModel" [(ngModel)]="service.formData.userid">
+            <td><input type="text" placeholder="Set User ID" formControlName="uid"  >
                 <div *ngIf="f['uid'].touched && f['uid'].invalid" class="alert alert-danger">
                     <div *ngIf="f['uid'].errors && f['uid'].errors['required']">User Id is required.</div>
                     <div *ngIf="f['uid'].errors && f['uid'].errors['minlength']">User Id should be 6 characters.</div>
@@ -49,7 +49,7 @@
         <tr>
             <td for="lp"> Set Login Password</td>
             <td>  -  </td>
-            <td><input type="password" placeholder="Set Login Password" formControlName="lp"  name="ngModel" [(ngModel)]="service.formData.password">
+            <td><input type="password" placeholder="Set Login Password" formControlName="lp"  >
                 <div *ngIf="f['lp'].touched && f['lp'].invalid" class="alert alert-danger">
                     <div *ngIf="f['lp'].errors && f['lp'].errors['required']">Password is required.</div>
                     <div *ngIf="f['uid'].errors && f['uid'].errors['minlength']">Password should be 6 characters.</div>
@@ -66,7 +66,7 @@
         <tr>
             <td for="tp">Set Transcation Password</td>
             <td>-</td>
-            <td><input type="password" placeholder="Set Transcation Password" formControlName="tp"  class="form-control" name="ngModel" [(ngModel)]="service.formData.transactionpass">
+            <td><input type="password" placeholder="Set Transcation Password" formControlName="tp"  class="form-control" >
                 <div *ngIf="f['tp'].touched && f['tp'].invalid" class="alert alert-danger">
                     <div *ngIf="f['tp'].errors && f['tp'].errors['required']">Transcation Password is required.</div>
                     <div *ngIf="f['tp'].errors && f['tp'].errors['minlength']">Transcation Password should be 4 characters.</div>
@@ -82,25 +82,14 @@
         </tr><br>
         <tr>
             <td></td>
-            <td><input type="submit"  [disabled]="form.invalid" (click)="onSubmit(form)" ></td>
+            <td><input type="submit"  [disabled]="form.invalid" (click)="onSubmit()" ></td>
             <td></td>
         </tr>
     </table>
 
-</form> -->
+</form> 
    
 
 
 
- <table>
-     <tr>
-         <th scope="col">rid</th>
-         <th scope="col">userid</th>
-         <th scope="col">password</th>
-     </tr>
-     <tr *ngFor="let t of abhi">
-         <td scope="row">{{t.rid}}</td>
-         <td>{{t.userid}}</td>
-         <td>{{t.password}}</td>
-     </tr>
- </table> 
+ 
