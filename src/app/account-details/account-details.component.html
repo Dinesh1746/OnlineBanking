@@ -11,7 +11,21 @@
                 </ul>
             </div>
             <section class="main">
-                <h1>Account Details</h1>
+                <h1>Account Details</h1><br><br><br><br><br>
+                
+                <table id="t10" border="1">
+                    <tr>
+                        <th scope="col">Account Number</th>
+                        <th scope="col">Account Balance</th>
+                        <th scope="col">Account status</th>
+                    </tr>
+                    <tr *ngFor="let t of data">
+                        <td scope="row">{{t.accountno}}</td>
+                        <td>{{t.accountbalance}}</td>
+                        <td>{{t.accountstatus}}</td>
+                    </tr>
+                </table> 
+
             </section>
         </div>
     </body>

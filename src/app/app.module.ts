@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {​​​​​​​​​ HttpClientModule }​​​​​​​​​ from '@angular/common/http';
-=======
-import { HttpClientModule } from '@angular/common/http';
-
-
->>>>>>> a166c677f8333939104cda5f95929f485af3597f
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,7 +53,8 @@ import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

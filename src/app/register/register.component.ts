@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisService } from '../regis.service';
+import { register } from './register.modes';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -12,8 +15,9 @@ import { RegisService } from '../regis.service';
 export class RegisterComponent implements OnInit {
 
   public abhi:any;
+  /* Register=new register(); */
 
-  constructor(private service:RegisService, private router:Router) {
+  constructor(public service:RegisService, private router:Router) {
   }
 
  ngOnInit(): void {
@@ -24,8 +28,24 @@ export class RegisterComponent implements OnInit {
    this.service.getRegisters().subscribe(result=>
     {
       this.abhi=result;
-    });
+    }) 
+
  }
+ 
+  //  addResisterData():void{
+
+  //   this.service.addResisterData(this.Register).subscribe(
+  //     res=>{
+  //       console.log(res);
+  //     }
+  //   )
+
+  // }
+
+  resetForm(form:NgForm){
+    form.form.reset();
+    this.service.formData=new register();
+  }
 
  
  form=new FormGroup(
@@ -46,9 +66,19 @@ export class RegisterComponent implements OnInit {
  submit(){
    console.log(this.form.value);
  }
- onSubmit() {​​​​​​​​​  
+ onSubmit(form:NgForm) {​​​​​​​​​  
+  this.insertRecord(form);
    this.router.navigate(['/login'])
 }​​​​​​​​​
+insertRecord(form:NgForm)
+{
+  this.service.addResisterData().subscribe(
+    res=>{
+      this.resetForm(form);
+    },
+    err=>{console.log(err);}
+  )
+}
 
 
 }
