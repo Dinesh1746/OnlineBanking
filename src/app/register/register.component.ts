@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisService } from '../regis.service';
-import { register } from './register.modes';
+import { register } from './register.models';
 import { NgForm } from '@angular/forms';
 
 @Component({

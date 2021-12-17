@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.getLoginData();
   }
+
   private getLoginData():void{
     this.service.getLogin().subscribe(result=>
      {
@@ -42,8 +43,15 @@ export class LoginComponent implements OnInit {
   submit(){
     console.log(this.form.value);
   }
-  onSubmit() {​​​​​​​​​  
-    this.router.navigate(['/dashboard'])  
+  onSubmit(a: { userid: any; password: any; }) {​​​​​​​​​  
+
+    if((this.form.value.userid==a.userid) && (this.form.value.pass==a.password))
+    {
+      this.router.navigate(['/dashboard']) 
+    }
+    else{
+      alert("invalid");
+    } 
 }​​​​​​​​​
 
 }

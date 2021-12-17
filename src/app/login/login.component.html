@@ -1,4 +1,4 @@
-<!--
+
     <h2 class="l">Login to your Account</h2>
 
 <form [formGroup]="form" (ngSubmit)="submit()">
@@ -25,19 +25,19 @@
             </div></td><br>
         </tr>
         <br>
-        <tr>
+        <tr *ngFor="let a of hari">
             <td></td>
-            <td><button type="submit" (click)=" onSubmit()" [disabled]="form.invalid" >Login</button></td>
+            <td><button type="submit" (click)=" onSubmit(a)" [disabled]="form.invalid" >Login</button></td>
             <td></td>
         </tr>
     </table>
 </form>
--->
+
 <h4>First Time User?<a routerLink="/register" routerLinkActive="active" >Register</a> </h4>
 <h4><a routerLink="/forgot-user-id" >Forgot User ID?</a></h4>
 <h4><a routerLink="/forgot-password" >Forgot Password?</a></h4>
 
-<table>
+<!-- <table>
     <tr>
         <th scope="col">rid</th>
         <th scope="col">userid</th>
@@ -48,4 +48,4 @@
         <td>{{t.userid}}</td>
         <td>{{t.password}}</td>
     </tr>
-</table>
+</table> -->
