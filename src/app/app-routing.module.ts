@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { OpenAccountComponent } from './open-account/open-account.component';
-import { ForgotUserIDComponent } from './forgot-user-id/forgot-user-id.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SetPasswordComponent } from './set-password/set-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
@@ -25,8 +23,6 @@ import { AdminDashComponent } from './admin-dash/admin-dash.component';
 const routes: Routes = [ {path:'login',component:LoginComponent},
 {path:'register',component:RegisterComponent},
 {path:'open-account',component:OpenAccountComponent},
-{path:'forgot-user-id',component:ForgotUserIDComponent},
-{path:'forgot-password',component:ForgotPasswordComponent},
 {path:'set-password',component:SetPasswordComponent},
 {path:'dashboard',component:DashboardComponent},
 {path:'account-statement',component:AccountStatementComponent},

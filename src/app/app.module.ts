@@ -11,8 +11,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { OpenAccountComponent } from './open-account/open-account.component';
-import { ForgotUserIDComponent } from './forgot-user-id/forgot-user-id.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SetPasswordComponent } from './set-password/set-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
@@ -35,8 +33,6 @@ import { AdminDashComponent } from './admin-dash/admin-dash.component';
     LoginComponent,
     RegisterComponent,
     OpenAccountComponent,
-    ForgotUserIDComponent,
-    ForgotPasswordComponent,
     SetPasswordComponent,
     DashboardComponent,
     AccountStatementComponent,

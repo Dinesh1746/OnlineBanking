@@ -1,3 +1,41 @@
+<!-- <body>
+
+    <h2><b>Admin Login</b></h2><br>
+    <div class="row">
+        <div class="col-md-4 offset-4">
+          <form  class="form" [formGroup]="form" (ngSubmit)="submit()" >
+            <div class="form-group">
+              <label for="userid">User ID<span class="text-danger">*</span></label>
+              <input type="text" formControlName="userid" class="form-control">
+              <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
+                <div *ngIf="f['userid'].errors && f['userid'].errors['required']">Userid is required.</div>
+            </div>
+       </div>
+       
+       
+            <div class="form-group">
+              <label for="pass">Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control"  formControlName="pass">
+            <div *ngIf="f['pass'].touched && f['pass'].invalid" class="alert alert-danger">
+                <div *ngIf="f['pass'].errors && f['pass'].errors['required']">password is required.</div>
+                 <div *ngIf="f['pass'].errors && f['pass'].errors['pattern']">Password length should be atleast 8<br> and contains atleast one uppercase,one lowercase,one numeric value<br>one special character.</div> 
+               
+            </div>
+             </div>
+    
+             <span class="text-danger">* marked fields are mandatory</span>
+             <div *ngFor="let b of abhishek">
+             <button type="submit" class="btn btn-primary"(click)=" onSubmit(b)" [disabled]="form.invalid" >Login</button>
+             
+             
+            </div>
+             
+          </form>
+        </div>
+       </div>
+    </body> -->
+
+
 <h2 class="l">Admin Login</h2>
 <form [formGroup]="form" (ngSubmit)="submit()">
 <table  class=t1>
@@ -26,4 +64,4 @@
         <td></td>
     </tr>
 </table>
-</form>
+</form> 

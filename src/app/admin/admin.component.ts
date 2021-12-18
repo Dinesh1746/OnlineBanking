@@ -38,9 +38,9 @@ submit(){
 }
 
 
-onSubmit(b: { adminuserid: any; adminpass: any; }) {​​​​​​​​​  
+onSubmit(b: { adminid: any; password: any; }) {​​​​​​​​​  
 
-  if((this.form.value.userid==b.adminuserid) && (this.form.value.pass==b.adminpass))
+  if((this.form.value.userid==b.adminid) && (this.form.value.pass==b.password))
   {
     this.router.navigate(['/admin-dash']) 
   }

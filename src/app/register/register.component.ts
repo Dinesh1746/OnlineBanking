@@ -14,46 +14,27 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  public abhi:any;
-
+ 
+ data:any;
+  submitted = false;
+  EventValue: any = "save";
 
   constructor(public service:RegisService, private router:Router) {
   }
 
  ngOnInit(): void {
-   this.getResisterData();
+   
  }
 
- private getResisterData():void{
-   this.service.getRegisters().subscribe(result=>
-    {
-      this.abhi=result;
-    }) 
-
- }
  
-<<<<<<< HEAD
-  //  addResisterData():void{
+   
+ 
 
-  //   this.service.addResisterData(this.Register).subscribe(
-  //     res=>{
-  //       console.log(res);
-  //     }
-  //   )
 
-  // }
-
-  // resetForm(form:NgForm){
-  //   form.form.reset();
-  //   this.service.formData=new register();
-  // }
-
-=======
->>>>>>> d586c6748496c26fd466890880ad976c8a839565
  
  form=new FormGroup(
    {
-     Ac:new FormControl('', [Validators.required,Validators.minLength(12),Validators.maxLength(12)]),
+     Ac:new FormControl('', [Validators.required]),
      uid:new FormControl('',[Validators.required, Validators.minLength(6)]),
      lp:new FormControl('',[Validators.required,Validators.minLength(6)]),
      clp:new FormControl('',[Validators.required]),
@@ -66,34 +47,25 @@ export class RegisterComponent implements OnInit {
    return this.form.controls;
  }
 
- submit(){
-   console.log(this.form.value);
+ save(){
+let d: register=new register();
+d.accountno=parseInt(this.form.value.Ac);
+d.userid=this.form.value.uid;
+d.password=this.form.value.lp;
+d.transactionpass=this.form.value.tp;
+console.log(this.form.value.Ac);
+this.service.postData(d);
+
  }
-<<<<<<< HEAD
-//  onSubmit(form:NgForm) {​​​​​​​​​  
-//   this.insertRecord(form);
+
+//  submit(){
+//    console.log(this.form.value);
+//  }
+
+//  onSubmit() {​​​​​​​​​  
+
 //    this.router.navigate(['/login'])
 // }​​​​​​​​​
-// insertRecord(form:NgForm)
-// {
-//   this.service.addResisterData().subscribe(
-//     res=>{
-//       this.resetForm(form);
-//     },
-//     err=>{console.log(err);}
-//   )
-// }
 
-onSubmit()
-{
-  this.router.navigate(['/login'])
-}
-
-=======
- onSubmit() {​​​​​​​​​  
-
-   this.router.navigate(['/login'])
-}​​​​​​​​​
->>>>>>> d586c6748496c26fd466890880ad976c8a839565
 
 }

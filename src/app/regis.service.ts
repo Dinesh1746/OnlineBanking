@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {​​​​​​​​​ HttpClient}​​​​​​​​​ from '@angular/common/http';
+import {​​​​​​​​​ HttpClient,HttpHeaders}​​​​​​​​​ from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { register } from './register/register.models';
 @Injectable({
@@ -7,23 +7,41 @@ import { register } from './register/register.models';
 })
 export class RegisService {
 
-  public basepath="http://localhost:59973/api/Registers";
+  private basepath="http://localhost:5961/api/Registers";
 
   formData:register=new register();
 
 
   constructor( private http:HttpClient) { }
 
-  public getRegisters():Observable<any>
-  {
-    return this.http.get(this.basepath);
-  }
+
+  httpOptions = {  
+    headers: new HttpHeaders({  
+      'Content-Type': 'application/json'  
+    })  
+  }  
+
+
+  
   
 
-  addResisterData()
-  {
-    return this.http.post(this.basepath,this.formData);
-  }
+  postData(formdata:register){
+ 
+    let obj:register =new register();
+    obj.accountno=formdata.accountno;
+    obj.userid=formdata.userid;
+    obj.password=formdata.password;
+    obj.transactionpass=formdata.transactionpass;
+
+    
+     return this.http.post(this.basepath,obj).subscribe(data=>
+     {
+       console.log(data);
+       alert("Registration Successful");
+     });
+      
+  
+  }   
 
 
 }

@@ -35,13 +35,14 @@ export class OpenAccountComponent implements OnInit {
      aadhar:new FormControl('', [Validators.required]),
      dob:new FormControl('', [Validators.required]),
      add:new FormControl('', [Validators.required]),
-     land:new FormControl('', [Validators.required]),
-     state:new FormControl('', [Validators.required]),
-     city:new FormControl('', [Validators.required]),
-     pin:new FormControl('', [Validators.required]),
      otype:new FormControl('',[Validators.required]),
-     si:new FormControl('', [Validators.required]),
-     gai:new FormControl('', [Validators.required]),
+   //  land:new FormControl('', [Validators.required]),
+   //  state:new FormControl('', [Validators.required]),
+   //  city:new FormControl('', [Validators.required]),
+  //   pin:new FormControl('', [Validators.required]),
+   
+   //  si:new FormControl('', [Validators.required]),
+    // gai:new FormControl('', [Validators.required]),
     //  iagree:new FormControl('', [Validators.required]),
    }
  );

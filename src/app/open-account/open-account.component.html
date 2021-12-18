@@ -4,14 +4,19 @@
     </h2 >
 
 
-    <h3 id="p">Personal Details</h3>
+    
 <form [formGroup]="form" (ngSubmit)="submit()">
 
     <table id="t3" class="form-group">
         <tr>
+            <th>Personal Details</th>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
             <td><label for="title">Title</label></td>
             <td>-</td>
-            <td><select name="title" formControlName="title" class="form-control">
+            <td><select name="title" formControlName="title" >
                 <option value="Mr">Mr</option>
                 <option value="Ms">Ms</option>
                 <option value="Mrs">Mrs</option>
@@ -82,8 +87,8 @@
                     <div *ngIf="f['dob'].errors && f['dob'].errors['required']">Date of Birth is required</div>
                 </div></td><br>
         </tr>
-        <tr>
-            <th>Residential Address</th>
+        <!-- <tr>
+            <th> Address</th>
             <td></td>
             <td></td>
         </tr><br>
@@ -223,6 +228,23 @@
             </select><div *ngIf="f['gai'].touched && f['gai'].invalid" class="alert alert-danger">
                 <div *ngIf="f['gai'].errors && f['gai'].errors['required']">Annual Income is required</div>
             </div></td><br>
+        </tr> -->
+        
+        <tr>
+            <td><label for="add">Address</label></td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter address" formControlName="add">
+                <div *ngIf="f['add'].touched && f['add'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['add'].errors && f['add'].errors['required']">Address is required</div>
+                </div></td>
+        </tr>
+        <tr>
+            <td><label for="otype">Occupation</label></td>
+            <td>-</td>
+            <td><input type="text" placeholder="Enter OccupationType" formControlName="otype">
+                <div *ngIf="f['otype'].touched && f['otype'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['otype'].errors && f['otype'].errors['required']">Occupation is required</div>
+                </div></td>
         </tr><br>
         <tr>
             <th>Debit/AtM Card</th>

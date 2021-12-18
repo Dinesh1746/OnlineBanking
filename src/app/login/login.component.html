@@ -1,5 +1,5 @@
-<body>
-<<<<<<< HEAD
+<!-- <body>
+
 <h2><b>User Login</b></h2><br>
 <div class="row">
     <div class="col-md-4 offset-4">
@@ -9,8 +9,8 @@
           <input type="text" formControlName="userid" class="form-control">
           <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
             <div *ngIf="f['userid'].errors && f['userid'].errors['required']">Userid is required.</div>
-        </div>
-   </div>
+          </div>
+       </div>
    
    
         <div class="form-group">
@@ -30,16 +30,15 @@
          
         </div>
          
-      </form>
+      </form><br><br>
     </div>
+ <h4>First Time User?<a routerLink="/register" routerLinkActive="active" >Register</a> </h4>
+<h4><a routerLink="/forgot-user-id" >Forgot User ID?</a></h4>
+<h4><a routerLink="/forgot-password" >Forgot Password?</a></h4> 
    </div>
-</body>
+</body> -->
    
-   <!-- <h2 class="l">Login to your Account</h2>
-=======
     <h2 class="l">Login to your Account</h2>
->>>>>>> 6e291e7a2f7063262df5d18ae907d7bc2f7829d5
-
 <form [formGroup]="form" (ngSubmit)="submit()">
     <table id=t1 class="form-group">
         <tr>
@@ -71,23 +70,12 @@
             <td></td>
         </tr>
     </table>
-</form> -->
+</form> 
+<h4>First Time User?<a routerLink="/register" routerLinkActive="active" >Register</a> </h4>
+<h4><a routerLink="/change-userid" >Forgot User ID?</a></h4>
+<h4><a routerLink="/set-password" >Forgot Password?</a></h4> 
 
-<!-- <h4>First Time User?<a routerLink="/register" routerLinkActive="active" >Register</a> </h4>
-<h4><a routerLink="/forgot-user-id" >Forgot User ID?</a></h4>
-<h4><a routerLink="/forgot-password" >Forgot Password?</a></h4> -->
 
-</body>
 
-<!-- <table>
-    <tr>
-        <th scope="col">rid</th>
-        <th scope="col">userid</th>
-        <th scope="col">password</th>
-    </tr>
-    <tr *ngFor="let t of hari">
-        <td scope="row">{{t.rid}}</td>
-        <td>{{t.userid}}</td>
-        <td>{{t.password}}</td>
-    </tr>
-</table> -->
+
+
