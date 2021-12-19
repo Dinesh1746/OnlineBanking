@@ -1,7 +1,7 @@
 <p><a routerLink="/fund-transfer">Back</a></p>
 <h2 id="res">Initiate RTGS Payment</h2>
 
-<form [formGroup]="form" (ngSubmit)="submit()" >
+<form [formGroup]="form" (ngSubmit)="save()" >
 
     <table class="t2" >
         <tr>
@@ -39,17 +39,24 @@
         <tr>
             <td><label for="date">Transaction Date</label></td>
             <td>-</td>
-            <td><input type="datetime-local" formControlName="date"  class="form-control" id="date" placeholder="Enter date and time" ></td>
+            <td><input type="datetime-local" formControlName="date"  class="form-control" id="date" placeholder="Enter date and time" >
+                <div *ngIf="f['date'].touched && f['date'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['date'].errors && f['date'].errors['required']">Date is required.</div>
+                </div><br>
+            </td>
         </tr>
         <tr>
             <td><label for="remark">Remarks</label></td>
             <td>-</td>
-            <td><input type="text" formControlName="remark"  class="form-control" id="remark" placeholder="Remarks" ></td>
+            <td><input type="text" formControlName="remark"  class="form-control" id="remark" placeholder="Remarks" >
+                <div *ngIf="f['remark'].touched && f['remark'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['remark'].errors && f['remark'].errors['required']">Remarks is required.</div>
+                </div><br>
+            </td>
         </tr><br>
         <tr>
             <td><input type="submit" [disabled]="form.invalid" value="Save"> &nbsp;&nbsp; <input type="reset"></td>
-            <td>-</td>
-            <td><input type="submit" value="Continue"></td>
+           
         </tr>
     </table>
 </form>

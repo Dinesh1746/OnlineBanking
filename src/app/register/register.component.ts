@@ -18,20 +18,13 @@ export class RegisterComponent implements OnInit {
  data:any;
   submitted = false;
   EventValue: any = "save";
-
+  
   constructor(public service:RegisService, private router:Router) {
   }
 
  ngOnInit(): void {
    
  }
-
- 
-   
- 
-
-
- 
  form=new FormGroup(
    {
      Ac:new FormControl('', [Validators.required]),
@@ -41,12 +34,11 @@ export class RegisterComponent implements OnInit {
      tp:new FormControl('',[Validators.required,Validators.minLength(4)]),
      ctp:new FormControl('',[Validators.required]),
    }
+  
  );
-
  get f(){
    return this.form.controls;
  }
-
  save(){
 let d: register=new register();
 d.accountno=parseInt(this.form.value.Ac);
@@ -55,7 +47,7 @@ d.password=this.form.value.lp;
 d.transactionpass=this.form.value.tp;
 console.log(this.form.value.Ac);
 this.service.postData(d);
-
+this.router.navigate(['/login'])
  }
 
 //  submit(){

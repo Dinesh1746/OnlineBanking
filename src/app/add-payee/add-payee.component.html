@@ -1,6 +1,6 @@
 <p><a routerLink="/fund-transfer">Back</a></p>
 <h2 id="res">Add New Benficiary</h2>
-<form [formGroup]="form" (ngSubmit)="submit()" >
+<form [formGroup]="form" (ngSubmit)="save()" >
 
     <table class="t2" >
         <tr>
@@ -26,11 +26,13 @@
             </td>
         </tr>
         <tr>
-            <td> Re-Enter Account Number</td>
-            <td>  -  </td>
-            <td><input type="number" formControlName="racno" class="form-control" id="racno" placeholder="Re-Enter Account Number" >
-               
-            
+            <td><label for="rac"> Re-Enter Account Number</label></td>
+            <td>-</td>
+            <td><input type="number"  formControlName="rac" class="form-control" id="rac" placeholder="Enter Nick Name" >
+                <div *ngIf="f['rac'].touched && f['rac'].invalid" class="alert alert-danger">  
+                    <div *ngIf="f['rac'].errors && f['rac'].errors['required']">Please enter Nick Name.</div>
+                    
+                </div><br>
             </td>
         </tr>
         <tr>
@@ -46,7 +48,7 @@
         </tr><br>
         <tr>
             <td></td>
-            <td><input type="submit" (click)=" onSubmit()" [disabled]="form.invalid" > </td>
+            <td><input type="submit"  [disabled]="form.invalid" > </td>
             <td></td>
         </tr>
     </table>

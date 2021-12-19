@@ -3,6 +3,8 @@ import { FormsModule, RequiredValidator } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { payee } from './ben.models';
+import { BenificaryService } from '../benificary.service';
 
 
 @Component({
@@ -11,8 +13,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-payee.component.css']
 })
 export class AddPayeeComponent implements OnInit {
-
-  constructor( private router:Router) { }
+  data:any;
+  submitted = false;
+  EventValue: any = "save";
+  constructor( private router:Router,private service:BenificaryService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +24,7 @@ export class AddPayeeComponent implements OnInit {
     {
       bname:new FormControl('', [Validators.required, Validators.minLength(4)]),
       acn:new FormControl('', [Validators.required,  Validators.minLength(8)]),
+      rac:new FormControl('', [Validators.required,  Validators.minLength(8)]),
       nic:new FormControl('', [Validators.required]),
 
     } 
@@ -30,9 +35,18 @@ get f(){
   submit(){
     console.log(this.form.value);
   }
-  onSubmit() {​​​​​​​ 
-    this.router.navigate(['/fund-transfer'])  
-  }​​​​​​​​​
+  save(){
+    let d: payee=new payee();
+    d.name=this.form.value.bname;
+    d.benaccountno=parseInt(this.form.value.anc);
+    d.nickname=this.form.value.nic;
+    console.log(this.form.value.fac);
+    this.service.postData(d);
+    this.router.navigate(['/fund-transfer'])
+     }
+  // onSubmit() {​​​​​​​ 
+  //   this.router.navigate(['/fund-transfer'])  
+  // }​​​​​​​​​
 
 
 }

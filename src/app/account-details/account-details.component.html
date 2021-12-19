@@ -15,14 +15,14 @@
                 
                 <table id="t10" border="1">
                     <tr>
+                        <th scope="col">Name</th>
                         <th scope="col">Account Number</th>
                         <th scope="col">Account Balance</th>
-                        <th scope="col">Account status</th>
                     </tr>
                     <tr *ngFor="let t of data">
-                        <td scope="row">{{t.accountno}}</td>
-                        <td>{{t.accountbalance}}</td>
-                        <td>{{t.accountstatus}}</td>
+                        <td scope="row">{{t.name}}</td>
+                        <td>{{t.accountno}}</td>
+                        <td>{{t.balance}}</td>
                     </tr>
                 </table> 
 

@@ -5,7 +5,7 @@
 
 
     
-<form [formGroup]="form" (ngSubmit)="submit()">
+<form [formGroup]="form" (ngSubmit)="save()">
 
     <table id="t3" class="form-group">
         <tr>
@@ -34,9 +34,10 @@
                 </div></td><br>
         </tr>
         <tr>
-            <td><label>Middle Name</label></td>
+            <td><label for="middle">Middle Name</label></td>
             <td>-</td>
-            <td><input type="text" placeholder="Enter MiddleName" ></td>
+            <td><input type="text" placeholder="Enter MiddleName" formControlName="middle">
+            </td>
         </tr>
         <tr>
             <td><label for="last">Last Name</label></td>
@@ -46,14 +47,14 @@
                     <div *ngIf="f['last'].errors && f['last'].errors['required']">last name is required</div>
                 </div></td><br>
         </tr>
-        <tr>
+        <!-- <tr>
             <td><label for="father">Father Name</label></td>
             <td>-</td>
             <td><input type="text" placeholder="Enter FatherName" formControlName="father">
                 <div *ngIf="f['father'].touched && f['father'].invalid" class="alert alert-danger">
                     <div *ngIf="f['father'].errors && f['father'].errors['required']">father name is required</div>
                 </div></td><br>
-        </tr>
+        </tr> -->
         <tr>
             <td><label for="mobile">Mobile Number</label></td>
             <td>-</td>
@@ -271,7 +272,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><button type="submit" (click)=" onSubmit()" [disabled]="form.invalid" >Submit</button></td>
+            <td><button type="submit"  [disabled]="form.invalid" >Submit</button></td>
             <td></td>
         </tr> 
     </table>

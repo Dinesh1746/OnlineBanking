@@ -12,7 +12,7 @@ import { LoginiService } from '../logini.service';
 })
 export class LoginComponent implements OnInit {
   public hari:any;
-
+  model : any={};
   constructor( private service:LoginiService,private router:Router) {
    }
 
@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
 
       userid:new FormControl('', [Validators.required]),
        pass:new FormControl('',[Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
-
     }
   );
 
@@ -42,11 +41,14 @@ export class LoginComponent implements OnInit {
   }
 
 
+  
+
   submit(){
     console.log(this.form.value);
   }
-  onSubmit(a: { userid: any; password: any; }) {​​​​​​​​​  
 
+
+  onSubmit(a: { userid: any; password: any; }) {​​​​​​​​​  
     if((this.form.value.userid==a.userid) && (this.form.value.pass==a.password))
     {
       this.router.navigate(['/dashboard']) 
@@ -55,6 +57,8 @@ export class LoginComponent implements OnInit {
       alert("invalid");
     } 
 }​​​​​​​​​
+
+
 onSubmit1()
 {
   this.router.navigate(['/register']) 

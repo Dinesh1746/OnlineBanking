@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {​​​​​​​​​ HttpClient,HttpHeaders}​​​​​​​​​ from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { register } from './register/register.models';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,10 +22,6 @@ export class RegisService {
     })  
   }  
 
-
-  
-  
-
   postData(formdata:register){
  
     let obj:register =new register();
@@ -39,8 +36,6 @@ export class RegisService {
        console.log(data);
        alert("Registration Successful");
      });
-      
-  
   }   
 
 

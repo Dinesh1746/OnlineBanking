@@ -25,7 +25,7 @@
         <tr>
             <td for="lp"> Set Login Password</td>
             <td>  -  </td>
-            <td><input type="password" placeholder="Set Login Password" formControlName="lp" class="form-control">
+            <td><input type="password" placeholder="Set Login Password" formControlName="lp" class="form-control" >
                <div *ngIf="f['lp'].touched && f['lp'].invalid" class="alert alert-danger">
                     <div *ngIf="f['lp'].errors && f['lp'].errors['required']">Password is required.</div>
                     <div *ngIf="f['uid'].errors && f['uid'].errors['minlength']">Password should be 6 characters.</div>
@@ -34,7 +34,7 @@
         <tr>
             <td for="clp">Confirm Login Password</td>
             <td>-</td>
-            <td><input type="password" placeholder="Confirm Login Password" formControlName="clp"  class="form-control">
+            <td><input type="password" placeholder="Confirm Login Password" formControlName="clp"  class="form-control" >
                 <div *ngIf="f['clp'].touched && f['clp'].invalid" class="alert alert-danger">
                     <div *ngIf="f['clp'].errors && f['clp'].errors['required']">Confirm Password is required.</div>
                 </div></td><br>
