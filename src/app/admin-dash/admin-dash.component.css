@@ -1,6 +1,6 @@
 #t10
 {
-    margin-left: 25%;
+    margin-left: 15%;
     margin-right: auto;
     border-collapse: collapse;
     width: 1000px;
@@ -9,4 +9,13 @@
 }
 td{
     text-align: center;
+}
+h1{
+    text-align: center;
+}
+body{
+    background-image: url("login1.jpg");
+    padding-bottom: 18%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

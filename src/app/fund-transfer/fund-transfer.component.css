@@ -55,7 +55,7 @@ position: fixed;
 .t7
 {
     margin-top: 3%;
-    margin-left: 25%;
+    margin-left: 24%;
     margin-right: auto;
     border-collapse: collapse;
     width: 1000px;
@@ -65,14 +65,19 @@ position: fixed;
 .t6
 {
     margin-top: 10%;
-    margin-left: 25%;
+    margin-left: 24%;
     margin-right: auto;
     border-collapse: collapse;
     width: 1000px;
     height: 10%;
     color: thistle;
 }
-
+body{
+    background-image: url("login1.jpg");
+    padding-bottom: 31%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
     

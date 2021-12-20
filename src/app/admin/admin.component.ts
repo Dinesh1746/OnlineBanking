@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   public abhishek:any;
+  public m:number=1;
   constructor( private service:AdminService ,private router:Router) { }
 
   ngOnInit(): void {
@@ -38,16 +39,24 @@ submit(){
 }
 
 
-onSubmit(b: { adminid: any; password: any; }) {​​​​​​​​​  
-
-  if((this.form.value.userid==b.adminid) && (this.form.value.pass==b.password))
+onSubmit() {​​​​​​​​​ 
+  console.log(this.form.value); 
+  for(let a of this.abhishek){
+  if((this.form.value.userid==a.adminid) && (this.form.value.pass==a.password))
   {
+    this.m=2;
+  }
+  }​​​​​​​​
+  
+  if(this.m==2){
+    alert("login sucessful");
     this.router.navigate(['/admin-dash']) 
   }
   else{
-    alert("invalid");
-  } 
-}​​​​​​​​​
+    alert("invalid login details")
+  }
+ 
+}
 
 
 }

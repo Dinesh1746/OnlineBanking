@@ -23,8 +23,8 @@ export class AddPayeeComponent implements OnInit {
   form=new FormGroup(
     {
       bname:new FormControl('', [Validators.required, Validators.minLength(4)]),
-      acn:new FormControl('', [Validators.required,  Validators.minLength(8)]),
-      rac:new FormControl('', [Validators.required,  Validators.minLength(8)]),
+      acn:new FormControl('', [Validators.required  ]),
+      rac:new FormControl('', [Validators.required]),
       nic:new FormControl('', [Validators.required]),
 
     } 
@@ -32,14 +32,15 @@ export class AddPayeeComponent implements OnInit {
 get f(){
     return this.form.controls;
   }
-  submit(){
-    console.log(this.form.value);
-  }
+  // submit(){
+  //   console.log(this.form.value);
+  // }
   save(){
     let d: payee=new payee();
     d.name=this.form.value.bname;
-    d.benaccountno=parseInt(this.form.value.anc);
+    d.benaccountno=parseInt(this.form.value.acn);
     d.nickname=this.form.value.nic;
+    d.accountno=parseInt(this.form.value.rac);
     console.log(this.form.value.fac);
     this.service.postData(d);
     this.router.navigate(['/fund-transfer'])

@@ -7,3 +7,16 @@ h2
     margin-left: auto;
     margin-right: auto;
 }
+body{
+    background-image: url("login1.jpg");
+    padding-bottom: 8%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input{
+    width:100%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

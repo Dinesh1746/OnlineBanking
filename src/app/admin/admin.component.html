@@ -35,9 +35,9 @@
        </div>
     </body> -->
 
-
+<body><br><br><br><br>
 <h2 class="l">Admin Login</h2>
-<form [formGroup]="form" (ngSubmit)="submit()">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
 <table  class=t1>
     <tr>
         <td><label for="userid">User ID</label></td>
@@ -58,10 +58,11 @@
             </div>
         </td><br>
     </tr><br>
-    <tr *ngFor="let b of abhishek">
+    <tr >
         <td></td>
-        <td><button type="submit" (click)="onSubmit(b)" [disabled]="form.invalid">Login</button></td>
+        <td><input type="submit" value="Login" [disabled]="form.invalid"></td>
         <td></td>
     </tr>
 </table>
 </form> 
+</body>

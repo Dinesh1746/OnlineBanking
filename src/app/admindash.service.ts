@@ -9,7 +9,7 @@ export class AdmindashService {
 
 
 
-  private basepath="http://localhost:59973/api/Admins";
+  private basepath="http://localhost:5961/api/Accounts";
 
   constructor(private http:HttpClient) { }
   

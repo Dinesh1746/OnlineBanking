@@ -21,6 +21,7 @@ formdata:payee=new payee();
     let obj:payee =new payee();
     obj.name=formdata.name;
     obj.benaccountno=formdata.benaccountno;
+    obj.accountno=formdata.accountno;
     obj.nickname=formdata.nickname;
 
      return this.http.post(this.basepath,obj).subscribe(data=>

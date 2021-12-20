@@ -1,4 +1,5 @@
-<p><a routerLink="/fund-transfer">Back</a></p>
+<body>
+<p><a routerLink="/fund-transfer"><b>Back</b></a></p>
 <h2 id="res">Initiate IMPS Payment</h2>
 <form [formGroup]="form" (ngSubmit)="save()" >
 
@@ -54,12 +55,13 @@
             </td>
         </tr><br>
         <tr>
-            <td><button type="submit"  [disabled]="form.invalid" > Save</button> &nbsp;&nbsp; <input type="reset"></td>
+            <td><input type="submit" value="Save" [disabled]="form.invalid" >  &nbsp;&nbsp; <input type="reset"></td>
             
             
         </tr>
     </table>
 </form>
+</body>
 
     
 

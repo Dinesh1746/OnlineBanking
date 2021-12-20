@@ -1,13 +1,16 @@
+<body><br><br>
+<h1>Admin Details</h1>
 
 <table id="t10" border="1">
     <tr>
         <th scope="col">Account Number</th>
         <th scope="col">Account Balance</th>
-        <th scope="col">Account status</th>
+        <th scope="col">Account Holder name</th>
     </tr>
     <tr *ngFor="let t of data1">
         <td scope="row">{{t.accountno}}</td>
-        <td>{{t.accountbalance}}</td>
-        <td>{{t.accountstatus}}</td>
+        <td>{{t.balance}}</td>
+        <td>{{t.name}}</td>
     </tr>
-</table> 
+</table>
+</body>
